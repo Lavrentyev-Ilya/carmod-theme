@@ -1,0 +1,401 @@
+.CmBraSlider{overflow:hidden; width:100%; position:relative; padding:15px 0; user-select:none; border:5px solid var(--cm-light-bg-color); border-right:none; border-left:none; background:white;}
+.CmBraTrack{display:flex; gap:20px; will-change:transform; padding:3px 0;}
+.CmBraItem{display:flex; align-items:center; justify-content:center; width:auto; flex:0 0 auto;}
+.CmBraItem img{display:block; max-width:150px; height:auto; max-height:60px; object-fit:contain; opacity:.9; transition:.3s;}
+.CmBraItem img:hover{opacity:1; transform:scale(1.05);}
+
+/* Адаптация под разное количество картинок */
+.CmBraSlider[data-count="3"] .CmBraItem img,
+.CmBraSlider[data-count="4"] .CmBraItem img,
+.CmBraSlider[data-count="5"] .CmBraItem img {
+  max-width: 200px;
+}
+
+.CmBraSlider[data-count="6"] .CmBraItem img,
+.CmBraSlider[data-count="7"] .CmBraItem img {
+  max-width: 180px;
+}
+
+.CmBraSlider[data-count="8"] .CmBraItem img,
+.CmBraSlider[data-count="9"] .CmBraItem img {
+  max-width: 160px;
+}
+
+.CmBraSlider[data-count="10"] .CmBraItem img,
+.CmBraSlider[data-count="11"] .CmBraItem img,
+.CmBraSlider[data-count="12"] .CmBraItem img {
+  max-width: 140px;
+}
+
+.CmBraSlider[data-count="13"] .CmBraItem img,
+.CmBraSlider[data-count="14"] .CmBraItem img,
+.CmBraSlider[data-count="15"] .CmBraItem img {
+  max-width: 120px;
+}
+
+.CmBraSlider[data-count="16"] .CmBraItem img,
+.CmBraSlider[data-count="17"] .CmBraItem img,
+.CmBraSlider[data-count="18"] .CmBraItem img {
+  max-width: 110px;
+}
+
+.CmBraSlider[data-count="19"] .CmBraItem img,
+.CmBraSlider[data-count="20"] .CmBraItem img,
+.CmBraSlider[data-count="21"] .CmBraItem img,
+.CmBraSlider[data-count="22"] .CmBraItem img {
+  max-width: 100px;
+}
+
+.CmBraSlider[data-count="23"] .CmBraItem img,
+.CmBraSlider[data-count="24"] .CmBraItem img,
+.CmBraSlider[data-count="25"] .CmBraItem img,
+.CmBraSlider[data-count="26"] .CmBraItem img,
+.CmBraSlider[data-count="27"] .CmBraItem img,
+.CmBraSlider[data-count="28"] .CmBraItem img,
+.CmBraSlider[data-count="29"] .CmBraItem img,
+.CmBraSlider[data-count="30"] .CmBraItem img {
+  max-width: 90px;
+}
+
+/* Адаптивность для экранов */
+@media (max-width: 1400px) {
+  .CmBraSlider[data-count="3"] .CmBraItem img,
+  .CmBraSlider[data-count="4"] .CmBraItem img,
+  .CmBraSlider[data-count="5"] .CmBraItem img {
+    max-width: 180px;
+  }
+  
+  .CmBraSlider[data-count="6"] .CmBraItem img,
+  .CmBraSlider[data-count="7"] .CmBraItem img {
+    max-width: 160px;
+  }
+  
+  .CmBraSlider[data-count="8"] .CmBraItem img,
+  .CmBraSlider[data-count="9"] .CmBraItem img {
+    max-width: 140px;
+  }
+  
+  .CmBraSlider[data-count="10"] .CmBraItem img,
+  .CmBraSlider[data-count="11"] .CmBraItem img,
+  .CmBraSlider[data-count="12"] .CmBraItem img {
+    max-width: 130px;
+  }
+  
+  .CmBraSlider[data-count="13"] .CmBraItem img,
+  .CmBraSlider[data-count="14"] .CmBraItem img,
+  .CmBraSlider[data-count="15"] .CmBraItem img {
+    max-width: 110px;
+  }
+  
+  .CmBraSlider[data-count="16"] .CmBraItem img,
+  .CmBraSlider[data-count="17"] .CmBraItem img,
+  .CmBraSlider[data-count="18"] .CmBraItem img {
+    max-width: 100px;
+  }
+  
+  .CmBraSlider[data-count="19"] .CmBraItem img,
+  .CmBraSlider[data-count="20"] .CmBraItem img,
+  .CmBraSlider[data-count="21"] .CmBraItem img,
+  .CmBraSlider[data-count="22"] .CmBraItem img {
+    max-width: 90px;
+  }
+  
+  .CmBraSlider[data-count="23"] .CmBraItem img,
+  .CmBraSlider[data-count="24"] .CmBraItem img,
+  .CmBraSlider[data-count="25"] .CmBraItem img,
+  .CmBraSlider[data-count="26"] .CmBraItem img,
+  .CmBraSlider[data-count="27"] .CmBraItem img,
+  .CmBraSlider[data-count="28"] .CmBraItem img,
+  .CmBraSlider[data-count="29"] .CmBraItem img,
+  .CmBraSlider[data-count="30"] .CmBraItem img {
+    max-width: 80px;
+  }
+}
+
+/* Остальные медиа-запросы остаются такими же как в предыдущем коде... */
+
+@media (max-width: 1200px) {
+  .CmBraSlider[data-count="3"] .CmBraItem img,
+  .CmBraSlider[data-count="4"] .CmBraItem img,
+  .CmBraSlider[data-count="5"] .CmBraItem img {
+    max-width: 160px;
+  }
+  
+  .CmBraSlider[data-count="6"] .CmBraItem img,
+  .CmBraSlider[data-count="7"] .CmBraItem img {
+    max-width: 140px;
+  }
+  
+  .CmBraSlider[data-count="8"] .CmBraItem img,
+  .CmBraSlider[data-count="9"] .CmBraItem img {
+    max-width: 120px;
+  }
+  
+  .CmBraSlider[data-count="10"] .CmBraItem img,
+  .CmBraSlider[data-count="11"] .CmBraItem img,
+  .CmBraSlider[data-count="12"] .CmBraItem img {
+    max-width: 110px;
+  }
+  
+  .CmBraSlider[data-count="13"] .CmBraItem img,
+  .CmBraSlider[data-count="14"] .CmBraItem img,
+  .CmBraSlider[data-count="15"] .CmBraItem img {
+    max-width: 100px;
+  }
+  
+  .CmBraSlider[data-count="16"] .CmBraItem img,
+  .CmBraSlider[data-count="17"] .CmBraItem img,
+  .CmBraSlider[data-count="18"] .CmBraItem img {
+    max-width: 90px;
+  }
+  
+  .CmBraSlider[data-count="19"] .CmBraItem img,
+  .CmBraSlider[data-count="20"] .CmBraItem img,
+  .CmBraSlider[data-count="21"] .CmBraItem img,
+  .CmBraSlider[data-count="22"] .CmBraItem img {
+    max-width: 80px;
+  }
+  
+  .CmBraSlider[data-count="23"] .CmBraItem img,
+  .CmBraSlider[data-count="24"] .CmBraItem img,
+  .CmBraSlider[data-count="25"] .CmBraItem img,
+  .CmBraSlider[data-count="26"] .CmBraItem img,
+  .CmBraSlider[data-count="27"] .CmBraItem img,
+  .CmBraSlider[data-count="28"] .CmBraItem img,
+  .CmBraSlider[data-count="29"] .CmBraItem img,
+  .CmBraSlider[data-count="30"] .CmBraItem img {
+    max-width: 70px;
+  }
+}
+
+@media (max-width: 992px) {
+  .CmBraTrack {
+    gap: 15px;
+  }
+  
+  .CmBraSlider[data-count="3"] .CmBraItem img,
+  .CmBraSlider[data-count="4"] .CmBraItem img,
+  .CmBraSlider[data-count="5"] .CmBraItem img {
+    max-width: 140px;
+  }
+  
+  .CmBraSlider[data-count="6"] .CmBraItem img,
+  .CmBraSlider[data-count="7"] .CmBraItem img {
+    max-width: 120px;
+  }
+  
+  .CmBraSlider[data-count="8"] .CmBraItem img,
+  .CmBraSlider[data-count="9"] .CmBraItem img {
+    max-width: 110px;
+  }
+  
+  .CmBraSlider[data-count="10"] .CmBraItem img,
+  .CmBraSlider[data-count="11"] .CmBraItem img,
+  .CmBraSlider[data-count="12"] .CmBraItem img {
+    max-width: 100px;
+  }
+  
+  .CmBraSlider[data-count="13"] .CmBraItem img,
+  .CmBraSlider[data-count="14"] .CmBraItem img,
+  .CmBraSlider[data-count="15"] .CmBraItem img {
+    max-width: 90px;
+  }
+  
+  .CmBraSlider[data-count="16"] .CmBraItem img,
+  .CmBraSlider[data-count="17"] .CmBraItem img,
+  .CmBraSlider[data-count="18"] .CmBraItem img {
+    max-width: 80px;
+  }
+  
+  .CmBraSlider[data-count="19"] .CmBraItem img,
+  .CmBraSlider[data-count="20"] .CmBraItem img,
+  .CmBraSlider[data-count="21"] .CmBraItem img,
+  .CmBraSlider[data-count="22"] .CmBraItem img {
+    max-width: 70px;
+  }
+  
+  .CmBraSlider[data-count="23"] .CmBraItem img,
+  .CmBraSlider[data-count="24"] .CmBraItem img,
+  .CmBraSlider[data-count="25"] .CmBraItem img,
+  .CmBraSlider[data-count="26"] .CmBraItem img,
+  .CmBraSlider[data-count="27"] .CmBraItem img,
+  .CmBraSlider[data-count="28"] .CmBraItem img,
+  .CmBraSlider[data-count="29"] .CmBraItem img,
+  .CmBraSlider[data-count="30"] .CmBraItem img {
+    max-width: 65px;
+  }
+}
+
+@media (max-width: 768px) {
+  .CmBraTrack {
+    gap: 12px;
+  }
+  
+  .CmBraSlider[data-count="3"] .CmBraItem img,
+  .CmBraSlider[data-count="4"] .CmBraItem img,
+  .CmBraSlider[data-count="5"] .CmBraItem img {
+    max-width: 120px;
+  }
+  
+  .CmBraSlider[data-count="6"] .CmBraItem img,
+  .CmBraSlider[data-count="7"] .CmBraItem img {
+    max-width: 100px;
+  }
+  
+  .CmBraSlider[data-count="8"] .CmBraItem img,
+  .CmBraSlider[data-count="9"] .CmBraItem img {
+    max-width: 90px;
+  }
+  
+  .CmBraSlider[data-count="10"] .CmBraItem img,
+  .CmBraSlider[data-count="11"] .CmBraItem img,
+  .CmBraSlider[data-count="12"] .CmBraItem img {
+    max-width: 80px;
+  }
+  
+  .CmBraSlider[data-count="13"] .CmBraItem img,
+  .CmBraSlider[data-count="14"] .CmBraItem img,
+  .CmBraSlider[data-count="15"] .CmBraItem img {
+    max-width: 75px;
+  }
+  
+  .CmBraSlider[data-count="16"] .CmBraItem img,
+  .CmBraSlider[data-count="17"] .CmBraItem img,
+  .CmBraSlider[data-count="18"] .CmBraItem img {
+    max-width: 70px;
+  }
+  
+  .CmBraSlider[data-count="19"] .CmBraItem img,
+  .CmBraSlider[data-count="20"] .CmBraItem img,
+  .CmBraSlider[data-count="21"] .CmBraItem img,
+  .CmBraSlider[data-count="22"] .CmBraItem img {
+    max-width: 65px;
+  }
+  
+  .CmBraSlider[data-count="23"] .CmBraItem img,
+  .CmBraSlider[data-count="24"] .CmBraItem img,
+  .CmBraSlider[data-count="25"] .CmBraItem img,
+  .CmBraSlider[data-count="26"] .CmBraItem img,
+  .CmBraSlider[data-count="27"] .CmBraItem img,
+  .CmBraSlider[data-count="28"] .CmBraItem img,
+  .CmBraSlider[data-count="29"] .CmBraItem img,
+  .CmBraSlider[data-count="30"] .CmBraItem img {
+    max-width: 60px;
+  }
+}
+
+@media (max-width: 576px) {
+  .CmBraTrack {
+    gap: 10px;
+  }
+  
+  .CmBraSlider[data-count="3"] .CmBraItem img,
+  .CmBraSlider[data-count="4"] .CmBraItem img,
+  .CmBraSlider[data-count="5"] .CmBraItem img {
+    max-width: 100px;
+  }
+  
+  .CmBraSlider[data-count="6"] .CmBraItem img,
+  .CmBraSlider[data-count="7"] .CmBraItem img {
+    max-width: 85px;
+  }
+  
+  .CmBraSlider[data-count="8"] .CmBraItem img,
+  .CmBraSlider[data-count="9"] .CmBraItem img {
+    max-width: 75px;
+  }
+  
+  .CmBraSlider[data-count="10"] .CmBraItem img,
+  .CmBraSlider[data-count="11"] .CmBraItem img,
+  .CmBraSlider[data-count="12"] .CmBraItem img {
+    max-width: 70px;
+  }
+  
+  .CmBraSlider[data-count="13"] .CmBraItem img,
+  .CmBraSlider[data-count="14"] .CmBraItem img,
+  .CmBraSlider[data-count="15"] .CmBraItem img {
+    max-width: 65px;
+  }
+  
+  .CmBraSlider[data-count="16"] .CmBraItem img,
+  .CmBraSlider[data-count="17"] .CmBraItem img,
+  .CmBraSlider[data-count="18"] .CmBraItem img {
+    max-width: 60px;
+  }
+  
+  .CmBraSlider[data-count="19"] .CmBraItem img,
+  .CmBraSlider[data-count="20"] .CmBraItem img,
+  .CmBraSlider[data-count="21"] .CmBraItem img,
+  .CmBraSlider[data-count="22"] .CmBraItem img {
+    max-width: 55px;
+  }
+  
+  .CmBraSlider[data-count="23"] .CmBraItem img,
+  .CmBraSlider[data-count="24"] .CmBraItem img,
+  .CmBraSlider[data-count="25"] .CmBraItem img,
+  .CmBraSlider[data-count="26"] .CmBraItem img,
+  .CmBraSlider[data-count="27"] .CmBraItem img,
+  .CmBraSlider[data-count="28"] .CmBraItem img,
+  .CmBraSlider[data-count="29"] .CmBraItem img,
+  .CmBraSlider[data-count="30"] .CmBraItem img {
+    max-width: 50px;
+  }
+}
+
+@media (max-width: 420px) {
+  .CmBraTrack {
+    gap: 8px;
+  }
+  
+  .CmBraSlider[data-count="3"] .CmBraItem img,
+  .CmBraSlider[data-count="4"] .CmBraItem img,
+  .CmBraSlider[data-count="5"] .CmBraItem img {
+    max-width: 85px;
+  }
+  
+  .CmBraSlider[data-count="6"] .CmBraItem img,
+  .CmBraSlider[data-count="7"] .CmBraItem img {
+    max-width: 75px;
+  }
+  
+  .CmBraSlider[data-count="8"] .CmBraItem img,
+  .CmBraSlider[data-count="9"] .CmBraItem img {
+    max-width: 65px;
+  }
+  
+  .CmBraSlider[data-count="10"] .CmBraItem img,
+  .CmBraSlider[data-count="11"] .CmBraItem img,
+  .CmBraSlider[data-count="12"] .CmBraItem img {
+    max-width: 60px;
+  }
+  
+  .CmBraSlider[data-count="13"] .CmBraItem img,
+  .CmBraSlider[data-count="14"] .CmBraItem img,
+  .CmBraSlider[data-count="15"] .CmBraItem img {
+    max-width: 55px;
+  }
+  
+  .CmBraSlider[data-count="16"] .CmBraItem img,
+  .CmBraSlider[data-count="17"] .CmBraItem img,
+  .CmBraSlider[data-count="18"] .CmBraItem img {
+    max-width: 50px;
+  }
+  
+  .CmBraSlider[data-count="19"] .CmBraItem img,
+  .CmBraSlider[data-count="20"] .CmBraItem img,
+  .CmBraSlider[data-count="21"] .CmBraItem img,
+  .CmBraSlider[data-count="22"] .CmBraItem img {
+    max-width: 48px;
+  }
+  
+  .CmBraSlider[data-count="23"] .CmBraItem img,
+  .CmBraSlider[data-count="24"] .CmBraItem img,
+  .CmBraSlider[data-count="25"] .CmBraItem img,
+  .CmBraSlider[data-count="26"] .CmBraItem img,
+  .CmBraSlider[data-count="27"] .CmBraItem img,
+  .CmBraSlider[data-count="28"] .CmBraItem img,
+  .CmBraSlider[data-count="29"] .CmBraItem img,
+  .CmBraSlider[data-count="30"] .CmBraItem img {
+    max-width: 45px;
+  }
+}

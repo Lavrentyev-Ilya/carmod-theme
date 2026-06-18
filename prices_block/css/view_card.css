@@ -1,0 +1,21 @@
+.CmProductPriceBox{max-width:100%;}
+.partCard .CmAdmEditProduct,
+.CmProdTabRow .CmAdmEditProduct{z-index:8!important;}
+.CmListPrTab_c .CmMorePrices{position:relative;}
+.partCard .CmProductMorePricesPanel,
+.CmProdTabRow .CmProductMorePricesPanel{position:absolute; z-index:160!important;}
+.CmListPrTab_c .CmProductMorePricesPanel,
+.CmPartTableView .CmProductMorePricesPanel{min-width:270px; overflow:hidden; text-align:left;}
+.CmProductsListMorePricesPanel > table.CmTablePriceWrap{display:none!important;}
+.CmListPrTab_c .CmProductMorePricesPanel .CmProductPriceCartButton .cm_HideCartImg,
+.CmPartTableView .CmProductMorePricesPanel .CmProductPriceCartButton .cm_HideCartImg{width:18px; height:18px;}
+.CmProductPriceVatBelow{margin:4px 0 0!important; justify-content:flex-end!important; padding-right:5px;}
+@media screen and (max-width:520px){
+    .CmProductPriceBox .CmProductPriceActions-compact{width:100%; justify-content:flex-end!important; align-items:center!important;}
+    .CmProductPriceBox .CmProductPriceActions-compact .CmProductPriceCartButton{width:auto!important; min-width:92px!important; max-width:none!important; height:31px!important; min-height:31px!important; padding:6px 10px 5px!important; gap:6px!important;}
+    .CmProductPriceBox .CmProductPriceActions-compact .CmProductPriceCartButton > span{display:inline-flex!important; align-items:center!important; justify-content:center!important; gap:6px!important; position:relative!important; z-index:1!important;}
+    .CmProductPriceBox .CmProductPriceActions-compact .CmProductPriceCartButton .cartText{display:inline-flex!important; max-width:none!important; opacity:1!important; color:#ffffff!important; font:700 12px/18px Arial,Helvetica,sans-serif!important; white-space:nowrap!important;}
+}
+@media screen and (max-width:648px){
+    .CmDescInfoPriceBlock .rightBlock .CmProductPriceBox{width:fit-content!important; min-width:0!important; max-width:100%!important; align-self:center; box-sizing:border-box!important;}
+}

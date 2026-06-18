@@ -1,0 +1,103 @@
+.CmPricesBlockTableHost{min-width:0; box-sizing:border-box;}
+.CmPricesBlockTableHost .CmProductPriceList{box-sizing:border-box;}
+.CmPricesBlockTableHost .CmProductPriceCell{min-width:0;}
+.CmDescInfoPriceBlock .rightBlock .CmProductPriceBox{width:max-content; min-width:270px; max-width:100%;}
+.CmDescInfoPriceBlock .rightBlock .CmProductPriceList.CmTablePriceWrap{width:max-content; min-width:340px; max-width:100%;}
+#CmContent .CmDescInfoPriceBlock .rightBlock .CmProductPriceBox,
+#CmContent .CmDescInfoPriceBlock .rightBlock .CmProductPriceList.CmTablePriceWrap{box-sizing:border-box!important;}
+.CmPriceQuantWrap{min-width:0;}
+.CmPricesBlockTableHost .CmProductPriceRow-hot,
+.CmPricesBlockTableHost .CmProductPriceRow-hot:hover{background:linear-gradient(0deg,rgba(255,132,35,.24) 0%,rgba(255,229,203,.58) 38%,#ffffff 100%)!important;}
+.CmPricesBlockTableHost .CmProductPriceRow-hot .CmPriceNum,
+.CmPricesBlockTableHost .CmProductPriceRow-hot .CmPriceCurrency,
+.CmPricesBlockTableHost .CmProductPriceRow-hot .CmPriceFormated,
+.CmPricesBlockTableHost .CmProductPriceRow-hot .CmPriceFormText{color:#f26a00!important; text-shadow:0 1px 0 #ffffff, 0 0 8px rgba(255,122,0,.28);}
+.CmPricesBlockTableHost .CmProductPriceRow-hot .CmProductPriceDeliveryBadge-instock{background:#f26a00!important; color:#ffffff!important; border-color:#d45700!important;}
+.CmProductPriceCartButton{transition:filter .18s ease, box-shadow .18s ease, border-color .18s ease!important;}
+.CmProductPriceCartButton:hover{background:var(--CmCartButtonColor)!important; background:linear-gradient(0deg,color-mix(in srgb,var(--CmCartButtonColor),#000 16%),var(--CmCartButtonColor) 52%,color-mix(in srgb,var(--CmCartButtonColor),#fff 28%))!important; filter:brightness(1.09) saturate(1.04);}
+.CmProductPriceCartButton.CmProductPriceCartButton-disabled,
+.CmProductPriceCartButton.CmProductPriceCartButton-disabled:hover,
+.CmProductPriceCartButton.CmProductPriceCartButton-disabled:active{--CmCartButtonColor:#b8b8b8; border-color:#9c9c9c!important; background:#b8b8b8!important; background:linear-gradient(0deg,#a5a5a5,#bcbcbc 52%,#e2e2e2)!important; box-shadow:0 1px 3px rgba(0,0,0,.12), inset 0 1px 0 rgba(255,255,255,.58), inset 0 -7px 12px rgba(0,0,0,.08)!important; filter:none!important; color:#ffffff!important; cursor:default!important; pointer-events:none!important;}
+.CmProductPriceCartButton.CmProductPriceCartButton-disabled::after,
+.CmProductPriceCartButton.CmProductPriceCartButton-disabled:hover::after{display:none!important; animation:none!important; opacity:0!important;}
+.CmProductPriceRow:has(.CmProductPriceCartButton:not(.CmProductPriceCartButton-disabled):hover) .CmProductPriceDeliveryBadge-time,
+.CmProductPriceRow:has(.CmProductPriceCartButton:not(.CmProductPriceCartButton-disabled):hover) .CmTimeDelivery{animation:CmDeliveryAttention .34s ease-in-out;}
+.CmProductPriceCartButton.CmCartNudgeUp{animation:CmCartNudgeUp .22s ease-out;}
+.CmProductPriceCartButton.CmCartNudgeDown{animation:CmCartNudgeDown .22s ease-out;}
+.CmAskPriceLoadingShell{width:180px!important; height:96px!important; min-width:180px!important; min-height:96px!important; max-width:calc(100vw - 32px)!important; padding:0!important; overflow:hidden!important; border:0!important; border-radius:8px!important; background:#ffffff!important; box-shadow:0 14px 32px rgba(0,0,0,.26)!important;}
+.CmAskPricePreload{display:flex; align-items:center; justify-content:center; width:100%; height:100%; background:linear-gradient(180deg,#ffffff 0%,#f7f7f7 100%);}
+.CmAskPricePreloadDots{display:flex; align-items:center; justify-content:center; gap:8px;}
+.CmAskPricePreloadDots span{display:block; width:8px; height:8px; border-radius:50%; opacity:.45; animation:CmAskPricePreloadPulse .9s ease-in-out infinite;}
+.CmAskPricePreloadDots span:nth-child(2){animation-delay:.14s;}
+.CmAskPricePreloadDots span:nth-child(3){animation-delay:.28s;}
+@keyframes CmCartNudgeUp{
+    0%{transform:translateY(0);}
+    45%{transform:translateY(-3px);}
+    100%{transform:translateY(0);}
+}
+@keyframes CmCartNudgeDown{
+    0%{transform:translateY(0);}
+    45%{transform:translateY(3px);}
+    100%{transform:translateY(0);}
+}
+@keyframes CmDeliveryAttention{
+    0%, 100%{transform:translateX(0);}
+    22%{transform:translateX(-3px);}
+    48%{transform:translateX(3px);}
+    72%{transform:translateX(-2px);}
+}
+@keyframes CmAskPricePreloadPulse{
+    0%, 100%{transform:scale(.72); opacity:.32;}
+    50%{transform:scale(1); opacity:.88;}
+}
+.cm_NotAvailable_t{display:flex; flex-direction:column; align-items:center; font-weight:bold; font-family:Arial; font-size:11px; white-space:nowrap; color:#808080;}
+.cm_NotAvailable_t span{float:left; margin:4px 0px 3px 5px;}
+.cm_NotAvailable_tH{display:none; font-weight:bold; font-family:Arial; font-size:11px; white-space:nowrap; color:#808080; margin-top:8px; height:20px;}
+.cm_NotAvailable_tH span{display:inline-block; margin:4px 0px 3px 5px;}
+.ListNotAvailable_t{border-radius:4px; cursor:pointer; transition:all 0.1s; display:inline-block; padding:8px 12px 8px 34px; font-weight:bold; font-family:Arial; font-size:13px; white-space:nowrap; color:#46608a; position:relative; background:unset; border:none;}
+.ListNotAvailable_t:hover{top:-1px; color:#4f8fe6!important; background:unset!important; border:none!important;}
+.ListAskPrice_t{cursor:pointer; transition:all 0.1s; display:inline-block; padding:8px 12px 8px 34px; font-weight:bold; font-family:Arial; font-size:13px; white-space:nowrap; color:#468a55; position:relative;}
+.ListAskPrice_t:hover{top:-1px; color:#63a772;}
+.ListAskPrice_t:active,
+.ListNotAvailable_t:active{box-shadow:inset 1px 1px 3px 1px rgb(191, 191, 191);}
+.CmNoInStock_t{text-align:center; font-size:12px; color:#808080; white-space:nowrap;}
+.CmNoInStock_t span{vertical-align:top; line-height:20px; white-space:nowrap;}
+.CmNotInStockImg_t{width:20px; fill:#808080; margin-right:5px;}
+.cm_askImg_t{width:20px; height:21px; position:absolute; left:9px; top:5px; fill:#468a55;}
+.cm_cartImg_t{width:18px; height:21px; position:absolute; left:9px; top:5px; fill:#46608a;}
+.CmProductPriceOrderButton.CmProductPriceCartButton{display:inline-flex!important; align-items:center!important; justify-content:center!important; width:auto!important; min-width:92px!important; max-width:none!important; height:28px!important; min-height:28px!important; max-height:30px!important; margin:0!important; padding:4px 10px 4px 8px!important; gap:6px!important; border:1px solid var(--CmCartButtonColor,var(--cm-cart-bg-color,#218726))!important; border-radius:4px!important; background:linear-gradient(0deg,color-mix(in srgb,var(--CmCartButtonColor,var(--cm-cart-bg-color,#218726)),#000 16%),var(--CmCartButtonColor,var(--cm-cart-bg-color,#218726)) 52%,color-mix(in srgb,var(--CmCartButtonColor,var(--cm-cart-bg-color,#218726)),#fff 28%))!important; color:#ffffff!important; box-shadow:0 2px 5px rgba(0,0,0,.24), inset 0 1px 0 rgba(255,255,255,.55), inset 0 -8px 14px rgba(0,0,0,.16)!important; line-height:18px!important;}
+.CmProductPriceOrderButton.CmProductPriceCartButton:hover{background:linear-gradient(0deg,color-mix(in srgb,var(--CmCartButtonColor,var(--cm-cart-bg-color,#218726)),#000 10%),color-mix(in srgb,var(--CmCartButtonColor,var(--cm-cart-bg-color,#218726)),#fff 8%) 55%,color-mix(in srgb,var(--CmCartButtonColor,var(--cm-cart-bg-color,#218726)),#fff 34%))!important; filter:brightness(1.09) saturate(1.04); color:#ffffff!important;}
+.CmProductPriceOrderButton.CmProductPriceCartButton > span{display:inline-flex!important; align-items:center!important; position:relative!important; z-index:1!important; color:#ffffff!important; font:700 12px/18px Arial,Helvetica,sans-serif!important; white-space:nowrap!important;}
+.CmProductPriceOrderButton.CmProductPriceCartButton .cm_cartImg,
+.CmProductPriceOrderButton.CmProductPriceCartButton .cm_cartImg_t{display:block!important; position:relative!important; left:auto!important; top:auto!important; z-index:1!important; flex:0 0 18px!important; width:18px!important; min-width:18px!important; max-width:18px!important; height:18px!important; max-height:18px!important; margin:0!important; padding:0!important; fill:#ffffff!important;}
+@media screen and (max-width:608px){
+    .cm_NotAvailable_t span,
+    .cm_NotAvailable_tH span{display:none;}
+    .cm_NotAvailable_t,
+    .cm_NotAvailable_tH{text-align:center;}
+}
+@media screen and (min-width:320px) and (max-width:480px){
+    .ListAskPrice_t{padding:8px;}
+    .ListNotAvailable_t{padding:8px 8px 8px 10px;}
+    .ListAskPrice_t span,
+    .ListNotAvailable_t span{display:none;}
+    .CmProductPriceOrderButton.CmProductPriceCartButton span{display:inline-flex!important; max-width:none!important; opacity:1!important;}
+    .cm_askImg_t,
+    .cm_cartImg_t{position:relative; top:0px; left:0px;}
+}
+@media screen and (max-width:520px){
+    .CmQuantBlToCartBl > .blockQty,
+    .CmQuantBlToCartBl > .CmQuantPriceBlock,
+    .CmProductPriceBox .blockQty,
+    .CmProductPriceList .CmQuantPriceBlock,
+    .CmProductMorePricesPanel .CmQuantPriceBlock{display:none!important;}
+    .CmPricesBlockTableHost .CmQuantPriceBlock{display:flex!important;}
+    .CmProductPriceBox .CmPriceQuantWrap,
+    .CmProductPriceList .CmPriceQuantWrap{gap:8px!important;}
+    .CmProductPriceList .CmProductPriceCartButton{width:28px!important; min-width:28px!important; height:28px!important; padding:4px!important; gap:0!important;}
+    .CmProductPriceBox .CmProductPriceMailOrder.CmProductPriceCartButton,
+    .CmProductPriceList .CmProductPriceMailOrder.CmProductPriceCartButton{width:auto!important; min-width:92px!important; max-width:none!important; padding:4px 10px!important; gap:6px!important;}
+    .CmProductPriceList .CmProductPriceCartText{display:none!important; max-width:0!important; opacity:0!important;}
+    .CmProductPriceBox .CmProductPriceMailOrder.CmProductPriceCartButton .cartText,
+    .CmProductPriceList .CmProductPriceMailOrder.CmProductPriceCartButton .cartText{display:inline-flex!important; max-width:none!important; opacity:1!important;}
+}

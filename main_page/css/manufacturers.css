@@ -1,0 +1,294 @@
+.CmLogoWr{width:100%; user-select:none;}
+.CmLoHeadCont{position:relative; padding-top:40px;}
+.CmLoSrchCon{display:flex; align-items:center; flex-direction:row; justify-content:space-between; align-items:center; padding:0 14px;}
+.CmLoBntCon{display:contents; align-items:center; width:100%; max-width:1200px; margin:0 auto; justify-content:space-between;}
+.CmLoConIn{flex:0 0 auto; width:260px; max-width:100%; height:40px; order:1; position:relative; display:flex; justify-content:space-between; align-items:center;}
+.CmLoConIn svg.CmSrchSvg{display:flex; position:absolute; right:0; top:0; width:40px; height:40px; fill:var(--cm-main); transition:opacity 0.2s ease-in-out; border-left:1px solid #e0e0e0; pointer-events:none;}
+.CmLoTtl{padding:12px 0; text-transform:uppercase; border-bottom:1px solid var(--cm-line); order:2; font-family:var(--cm-text-family)!important; font-size:22px!important;}
+.CmLoVehBtn{flex:0 0 auto; display:flex; gap:10px; order:3; min-width:250px;}
+.CmLoBtn{display:flex; margin:0 5px; border-bottom:1px solid; transition:background 0.5s ease, color 0.5s ease;}
+.CmLoBtn svg{display:inline-block !important; transform:translateY(0)!important; transition:transform 0.3s ease!important;}
+.CmLoBtn.active svg {transform: translateY(-3px) !important;}
+.CmLoBtn.active {background: var(--cm-light-bg);color: var(--cm-main);}
+.CmLoBtn.active svg {fill: var(--cm-main);}
+.CmLoBtn:not(.active) {color: #a0a0a0;}
+.CmLoBtn:not(.active) svg {fill: #a0a0a0;}
+.CmLoBtn.active:hover svg {fill: var(--cm-main);stroke: var(--cm-main);}
+.CmLoBtn:not(.active):hover {border-bottom: 1px solid #606060; color: #606060; }
+.CmLoBtn:not(.active):hover svg {fill: #606060; stroke: #606060; }
+.CmLoBtn svg {width: 75px; height:40px; transition: fill 0.3s ease, stroke 0.3s ease;}
+.CmLoBtn span {margin-top: 3px;font-size: 14px;font-weight: 500;}
+.CmLoBtn {transition: border-color 0.3s ease, color 0.3s ease;}
+.CmLoSvgRem{opacity:0; position:absolute; width:22px; height:22px; top:9px; right:9px; cursor:pointer; transition:opacity 0.3s ease;}
+.CmLogoCont{
+    display: none;
+    justify-items: center;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 25px;
+    padding: 25px 0;
+	margin: 0 14px;
+    border-bottom: 1px solid #1325303d;
+}
+.CmLogoCont[data-type="passenger"] {display: grid;}
+.CmLogoCont.SrchMode {
+    display: inline-flex !important;
+    flex-wrap: nowrap;
+    gap: 15px;
+    margin: 10px 5px !important;
+    padding: 0 !important;
+    border: none !important;
+}
+
+.CmLogoCont .CmBrLo {
+    width: 80px;
+    height: 70px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 10px;
+}
+.CmLogoCont .CmBrLo:hover{border:1.5px solid var(--cm-main); background-color:var(--cm-aero-bg-color);}
+.CmLoVehBtn{display:flex;}
+.CmLoBtnSec{display:flex; margin:0; padding:0; cursor:pointer;}
+.CmSrcErr{display:none; height:60px; color:var(--cm-main); font-size:24px; text-align:center; padding:50px; grid-column:1 / -1; font-family:var(--cm-text-family); opacity:0; transition:opacity 0.3s ease-in-out;}
+.CmSrcErr.visible{display: block;opacity: 1;}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.CmLoInpGr{position:relative;}
+.CmLoSrcInp{width:100%!important; height:40px!important; box-sizing:border-box!important; padding:0 48px 0 18px!important; border:solid 1px var(--cm-main)!important; font-size:16px!important; line-height:38px!important; color:var(--cm-main)!important; cursor:pointer!important; transition:all 0.2s ease-in-out!important; border-radius:0!important;}
+.CmLoSrcInp:hover{box-shadow:inset 0 0 5px 0px var(--cm-light-bg-color);}
+.CmLoInpLbl{
+    display: flex!important;
+    position: absolute!important;
+    left: 18px!important;
+    top: 50%!important;
+    color: var(--cm-main)!important;
+    font-family: var(--cm-text-family)!important;
+    pointer-events: none;
+    transform: translateY(-50%);
+    transition: all 0.2s ease-in-out; font-size:12px!important; line-height:unset!important;
+}
+
+.CmLoSrcInp:focus, .CmLoSrcInp:valid{outline: none;background: #fff; box-shadow:inset 0 0 5px 0px var(--cm-light-bg-color);}
+
+.CmLoSrcInp:focus ~ .CmLoInpLbl,
+.CmLoSrcInp:valid ~ .CmLoInpLbl {
+    transform: translateY(-150%) scale(0.8);
+    background-color: #fff;
+    color: var(--cm-main);
+    padding: 0 5px;
+}
+
+.CmSecBrand{transition: opacity 0.3s ease;}
+.CmSecBrand.hidden{opacity: 0;}
+.CmLogoCont.SrchMode.global{
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    gap: 25px;
+    padding: 25px 0;
+    border-bottom: 1px solid #1325303d;
+}
+
+.CmScBrTit.SrchMode.global {
+    display: block;
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+.CmScBrTit.SrchMode.global .CmSecBrandCont {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    justify-items: center;
+    margin-top: 25px;
+}
+
+
+/* TITLE */
+
+.CmScBrTit { 
+    padding-bottom: 20px; 
+    width: 100%; 
+}
+.CmSecBrandCont { 
+    display: grid; 
+    grid-template-columns: repeat(7, 1fr); 
+    justify-items: center; 
+    margin-top: 25px; 
+    overflow: hidden; 
+    transition: height 0.5s ease-in-out; padding:0 14px;
+}
+.CmSecBrandCont.visible { 
+    max-height: none; 
+}
+.CmSecBrand { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    font-size: 15px; 
+    font-weight: bold; 
+    background-color: #F9FAFB; 
+    padding: 10px; 
+    margin: 3px; 
+    width: 85%; 
+	height:50px;
+    box-sizing: border-box; 
+    text-align: center; 
+    opacity: 1; 
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+	color: var(--cm-main);
+	font-family:var(--cm-text-family);
+}
+.CmSecBrand:hover { 
+    background-color: var(--cm-main); 
+    color: #fff; 
+}
+.CmSecBrand a { 
+    
+}
+.CmSecBrand:hover a { 
+    
+}
+
+.CmSecBrand.hidden {
+    opacity: 0;
+    transform: translateY(20px);
+    visibility: hidden; /* Hides element but keeps it in layout for transitions */
+    pointer-events: none; /* Prevents interaction with hidden elements */
+    height: 0; /* Collapses height for layout purposes */
+    margin: 0; /* Removes margin to prevent gaps */
+    padding: 0; /* Removes padding to collapse fully */
+    overflow: hidden; /* Ensures content doesn’t spill */
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, height 0.3s ease-in-out, margin 0.3s ease-in-out, padding 0.3s ease-in-out;
+}
+
+.CmSecBrandBtnCont { 
+    display: flex; 
+    align-items: center; 
+    width: fit-content; 
+    padding: 10px 20px; 
+    border: 1px solid var(--cm-section-color); 
+    margin: 30px auto 60px auto; 
+    color: var(--cm-section-color); 
+    cursor: pointer; 
+    transition: all 0.1s ease-in-out; 
+}
+.CmSecBrandBtnCont:hover { 
+    color: var(--cm-main); 
+    border: 1px solid var(--cm-main); 
+    transform: scale(1.02); 
+}
+.CmSecBrandBtnCont a { 
+    display: flex; 
+    align-items: center; 
+    color: inherit; 
+    text-decoration: none; 
+    font-weight: bold; 
+}
+.CmSecBrandBtnCont svg { 
+    width: 23px; 
+    height: 20px; 
+    stroke: currentColor; 
+    stroke-width: 2; 
+    transition: transform 0.2s ease-in-out; 
+}
+.CmSecBrandBtnCont svg.up { 
+    transform: rotate(180deg); 
+}
+
+.CmSecBtnAc {
+    display: none;
+}
+
+
+
+@media (max-width: 1300px) {
+    .CmLogoCont {
+        grid-template-columns: repeat(7, 1fr)!important;
+    }
+}
+@media (max-width: 1200px) {
+    .CmLogoCont, .CmSecBrandCont {
+        grid-template-columns: repeat(7, 1fr)!important;
+    }
+}
+@media (max-width: 1024px) {
+	.CmLogoCont, .CmSecBrandCont {
+        grid-template-columns: repeat(4, 1fr)!important;
+		}
+	.CmSecBrand {width: 85%;font-size: 24px;
+	}
+}
+@media (max-width: 992px) {
+    .CmLoSrchCon {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .CmLoBntCon {
+		display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+		gap: 20px;
+        max-width: fit-content;
+		margin-top:15px;
+    }
+    .CmLoVehBtn {justify-content: center;}
+}
+@media (max-width: 768px) {
+     .CmLogoCont, .CmSecBrandCont {
+        grid-template-columns: repeat(3, 1fr)!important;
+    }
+	.CmSecBrand {
+        width: 85%;
+        font-size: 22px;
+    }
+}
+@media (max-width: 600px) {
+    .CmLogoCont {grid-template-columns: repeat(3, 1fr)!important;}
+	.CmLogoCont, .CmSecBrandCont {
+        grid-template-columns: repeat(2, 1fr)!important;
+    } 
+}
+@media (max-width: 480px) {
+    .CmLoConIn svg.CmSrchSvg {
+		display: block;
+	}
+	.CmSecBrand {
+        width: 85%;
+        font-size: 20px;
+    }
+	.CmLoBntCon{flex-direction:column; gap:0px; margin-top:10px;}
+	.CmLoVehBtn {
+        margin-top:20px;
+    }
+}
+@media (max-width: 425px) and (min-width: 200px) { 
+    .CmLoBtnSec {
+		margin: 0;padding: 0;
+	}		
+}
+@media (max-width: 425px) {
+  
+}
+@media (max-width: 320px) {
+	.CmLogoCont, .CmSecBrandCont {
+        grid-template-columns: repeat(1, 1fr)!important;
+    }
+    .CmSecBrand {
+        width: 85%;
+        font-size: 18px;
+    }
+}

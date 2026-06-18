@@ -1,0 +1,255 @@
+
+div.CmSearcSectInput{margin:0px}
+.CmSearcSectInput .CmInputSect{width:100%; font-size:11px; text-transform:uppercase; border-style:solid; border-width:1px; height:26px !important; line-height:26px; outline:0; font-weight:bold; display:inline-block; padding:0px 0px 0px 12px; border-radius:3px; box-shadow:inset 2px 2px 6px 0px #bab9b9; margin:0px !important; color:var(--cm-main);}
+.CmSearcSectInput::-webkit-input-placeholder{text-transform: none;color: #464646;font-weight: normal;}
+.CmSearcSectInput::-moz-placeholder{text-transform: none;color: #464646;font-weight: normal;}
+.CmSearcSectInput:-moz-placeholder{text-transform: none;color: #464646;font-weight: normal;}
+.CmSearcSectInput::-ms-input-placeholder{text-transform: none;color: #464646;font-weight: normal;}
+.CmSearcSectInput:focus::-webkit-input-placeholder{color: #d1d1d1;}
+.CmSearcSectInput:focus::-moz-placeholder{color: #d1d1d1;}
+.CmSearcSectInput:focus:-moz-placeholder{color: #d1d1d1;}
+.CmSearcSectInput:focus::-ms-input-placeholder{color: #d1d1d1;}
+div.CmClearButt{position:absolute; right:0px; top:1px; display:none; width:18px; height:16px; padding:7px; cursor:pointer; transition:all 0.3s; border-radius:0px 4px 4px 0px;}
+div.CmClearButt:hover svg{fill:#ffffff;}
+
+.CmVinPlate{display:inline-flex; margin:2px; font-size:120%; border-width:1px; border-style:solid; border-color:#8c8c8c; flex-wrap:nowrap; justify-content:flex-start;}
+.CmVinTx{font-weight:bold; color:#ffffff; padding:6px 10px; background:#8c8c8c;}
+.CmVinValue{padding:6px 10px; background:#ffffff;}
+
+/*Title & search*/
+.CmBrSearchWrap{display:flex; background-color: #f5f5f5; margin:0px; width:259px;}
+.CmTitleSearchBlock{padding: 0px 0px 10px 26px; width:85%;}
+
+/* ---TOP SECTIONS--- */
+.CmFillSvg{fill: #858585;}
+.CmStrokeSvg{stroke: #858585;}
+.CmFillColSvg{fill: #000000;}
+.CmFTFill{fill: #dfdfdf;}
+
+.CmCategWrapBlock_new{padding:0px 20px 0px 0px; background-color: #f5f5f5; margin:0px 0px; max-width:1100px;}
+.CmFlexBasis45{width: 49%; float: left; margin: 0.3%;}
+.CmBlockGlobHeight{height: 85px;}
+
+/* BLOCK - 1 */
+.CmBoxCarBody{display:grid; grid-template-rows:100px 300px; background-color: #ffffff; border-style:solid; border-width:1px;}
+a[data-furl="body-lights"]{display:none !important;}
+.CmInnerBlockGen{width: 100%; background-color: #ffffff;}
+.CmInnerBlock_1_1{display: flex; justify-content: space-between; background-color: #fff;}
+.CmModelBody{display:flex; align-items:center; width:60%;}
+.CmModelNameBlock{flex:100%; align-self:center; font-size:16px; padding:10px; line-height:125%;}
+.CmModelNameTxt{font-weight:bold; color:var(--cm-main);}
+.CmTypeNameTxt{font-size:0.9em; font-weight:bold; font-family:Arial;}
+.CmVdsTxt{font-size:0.7em; color:#adadad;}
+.CmModelYearTxt{font-size:0.8em; font-family: Arial; text-align:center; color:var(--cm-main);}
+.CmDriveTypeTxt{font-size:11px;}
+.CmInnerBlock_1_2{display: grid; grid-template-columns: repeat(4, 1fr); position: relative;}
+.petrolImg{display:none;}
+.CmModBodyBl{display:flex; align-items:center; flex-direction: column;}
+.CmModBodyBl svg{width:71%; height:70%;}
+.CmBodyDriveType{display:flex; align-items:center; font-size: 14px; margin-top:3px; color:#878787;}
+.CmFuelTankBl{position:relative; display:flex; align-items:center; justify-content:center;}
+.CmFuelTankBl svg{width:47%;}
+.CmFuelTankVal{position:absolute; text-align:center; font-weight:bold; margin:10px 0px 0px 2px; display:flex; flex-direction:column; align-items:center; background-color:#fff; font-size:16px; font-weight:bold; line-height:16px; color: #858585;}
+.CmFuelTankVal span{font-weight:normal; color:#858585;}
+.CmInnerBlock_1_3{display: grid; grid-template-columns: repeat(4, 1fr);}
+.CmCategSvgImg{padding:0px 8px; display:flex; align-items:center; justify-content:center; flex-basis:18%; position:relative;}
+.CmCategSvgImg svg{width:65%;}
+.CmInnerBlock_1_4{display:grid; grid-template-columns:repeat(4, 1fr); position:relative; max-height:110px;}
+.CmLightSpecsBlock{grid-area:2/2/2/5; display:grid; grid-template-columns: repeat(3, 1fr); align-content:center; position: relative; color: #505050;}
+.CmHiddenLightBlock{display:none; transition:all 0.3s;}
+.CmLightSpecsInnerBlock{max-width: 80%; grid-area: 1/2/2/4; display: grid; align-content: center; line-height: 25px;}
+.CmLightSpecsHov:hover{position: absolute; background: #fff; border: 1px solid #505050; box-shadow: 6px 6px 50px -6px rgba(34, 60, 80, 0.6); border-radius: 6px; padding: 10px;}
+.CmLightSpecsHov:hover .CmHiddenLightBlock{display: block;}
+.CmBeamWrap, .CmLightBlockWrap, .CmLightSpecsHov{overflow: hidden; line-height: 17px; z-index: 10;}
+.CmBeamTitle, .CmLowBeamTitle, .CmHighBeamTitle, .CmLightBlockTitle{text-overflow: ellipsis; white-space: nowrap; overflow: hidden; font-size: 12px;}
+.CmLightBlockTitle{margin-top: 5px;}
+.CmBeamValue, .CmLowBeamValue, .CmHighBeamValue, .CmLightBlockValue{color:var(--cm-main);}
+
+
+/* BLOCK - 2 */
+.CmBoxCarEngine{display: grid; grid-template-rows: 100px 300px; background-color: #ffffff; border: 1px solid #8a8a8a;}
+a[data-furl="engine-oil"]{display:none !important;}
+.CmInnerBlock_2_1{border-bottom:1px solid #dddddd; background-color:#dddddd;}
+.CmEngineInfo{display: grid; grid-template-columns: repeat(4, 1fr); height: 100%;}
+.CmEngineImg{position:relative; display:flex; justify-content:center; align-items:center; }
+.CmEngineElectric{position:absolute; width:25%; margin:5px 0px 0px 5px;}
+.CmEngineSvgImg{fill: #707070; display: contents;}
+.CmEngTxt, .CmCubeTxt{position:absolute; width: 100%; margin-top:5px; margin-right:1px; font-size: 17px; font-weight:bold; text-align:center; color: #ffffff; text-shadow: 1px 1px 1px #383838;}
+.CmCubeTxt{display: flex; flex-direction: column; align-items: center; margin-top: 8px;}
+.CmEngineImg svg{width:80%;}
+.CmEngineInfTxt{display: grid; align-content: center; overflow: hidden; grid-area: 1/2/2/5; margin-left: 20px;}
+.CmEInfTxt1{font-size: 18px; font-weight:bold; width:95%; text-overflow:ellipsis; white-space:nowrap; overflow:hidden; line-height:20px; color:#000000; text-shadow:1px 1px 2px #ffffff;}
+.CmEInfTxt2{color:#505050; font-size:12px; line-height:20px; }
+.CmFuelTypeTxt{color:var(--cm-main); font-size:12px; line-height:20px; }
+.CmEInfTxt2{font-weight: bold;}
+.CmEngTypeTxt2{font-size: 10px; color: #505050; width: 100%; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; line-height: 13px; display: flex; flex-direction: column;}
+.CmInnerBlock_2_2{display: grid; grid-template-columns: repeat(4, 1fr);}
+.CmEngOilBl{display: grid; grid-template-columns: repeat(3, 1fr); grid-area: 2/2/2/5; transition: all 0.2s;}
+.CmEngOilImg{position: relative; flex-basis: 18%; display: flex; justify-content: center; align-items: center; margin-right: 5px;}
+.CmOilLiter{position: absolute; top: 50%; font-size:11px; font-weight: bold; color: #ffffff;}
+.CmOilDropImg{display:flex; align-items:center; justify-content:center; width:31%; fill:#ffffff; position:absolute; top:45%;}
+div.CmLiquidDropImg{top: 42%; width: 45px; right: 31%;}
+.CmEngOilTitleDesc{max-width: 80%; grid-area: 1/2/2/4; display: grid; align-content: center; line-height: 25px;}
+.CmEngOilTitle{font-size:16px; font-weight:bold; text-overflow:ellipsis; white-space:nowrap; overflow:hidden; color:var(--cm-main);}
+.CmEngOilDescBl{display:grid }
+.CmEngOilDesc{color:#515151; font-size:12px; text-overflow:ellipsis; white-space:nowrap; overflow:hidden;}
+.CmEngOilSpec{width: 100%; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; line-height: 13px;}
+.CmOilFilIm{cursor: pointer; transition: all 0.1s ease-in-out; justify-self: center; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center;}
+.CmOilFilIm svg{width:70%;}
+.CmInnerBlock_2_4{border-bottom: none;}
+
+
+/* BLOCK - 3 */
+.CmCategWrapBlocks_3{display: grid; grid-template-rows: repeat(4, 1fr); grid-template-columns: repeat(2, 1fr); grid-gap: 5px;}
+.CmInnerBlockG{display:flex; position:relative; background-color:#f5f5f5; padding:6px 0px; transition:all 0.1s; width:calc(49% + 2px);}
+.CmInnerBlockHov{display:flex;}
+.CmInnerBlockHov:hover{background-color:#ffffff;}
+.CmSpecLink{display:grid; align-content:center; grid-area:1/2/2/5; z-index:10; padding:10px;}
+.CmSpecLink:hover .CmTOilTitle{cursor:pointer; text-decoration:underline;}
+.CmInnerBlockHov:visited{color:#000000;}
+.CmBrakeLiquidBlock{grid-area: 1/2/2/5; display:grid; align-content: center; width: fit-content;}
+.CmBrLiqInfo{line-height: 18px; color: #858585;}
+.CmBrakeLiqTitle{font-size: 14px; font-weight: bold; margin-bottom: 5px;}
+.CmBrakeLiqSpecVal{display: flex; align-items: center; background-color: #f5f5f5; font-size: 13px; border: 1px solid #b7b7b7; border-radius: 3px; overflow: hidden; width: fit-content; margin-top: 3px;}
+.CmLiquidLiterValue{position:absolute; top:50%; color:#363636;}
+.CmTransOilSvgImg{stroke:#9f9f9f; fill:#9f9f9f;}
+.CmTransOilSvgImg svg{width:65%!important;}
+.CmRearDifferBlock{display:grid; align-content: center; width: fit-content; grid-area: 1/2/2/5;}
+.CmRearDiffInfo{line-height: 18px;}
+.CmRearDiffTitle{font-size: 13px; font-weight: bold;}
+.CmRearDiffSpecVal{display: flex; align-items: center; font-size: 13px; overflow: hidden; width: fit-content; margin-top: 3px;}
+.CmRearDiffValue{border-right: 1px solid #b7b7b7; flex-shrink: 0;}
+.CmRearDiffLitSpec{padding:3px 0; text-align:center; text-overflow:ellipsis; overflow:hidden; white-space:nowrap;}
+.CmAtOilBlock{margin-top: 10px;}
+.CmTOilSpecsWrap, .CmAFValSpecBlock, .CmClutchSpecsBlock{display: grid; grid-auto-flow: column; align-items: center; font-size: 13px; overflow: hidden; width: fit-content; margin-top: 3px;}
+.CmSpecTxtColor{color:#a1a1a1;}
+.CmTOilTitle{font-size: 13px; font-weight: bold; color:var(--cm-main);}
+.CmOilValSpecs{display: grid; grid-column-gap: 10px;}
+.CmAFVal{margin-top: none; border-right: 1px solid #b7b7b7; flex-shrink: 0;}
+.CmAFWrapBlock, .CmClutchWrapBlock{display: grid; align-content: center; grid-area: 1/2/2/5;}
+.CmAfTitleBlock{display: flex; align-items: center; justify-content: flex-start; column-gap: 10px;}
+.CmAFSpecsWrap, .CmClutchSpecsWrap{display: grid; column-gap: 10px;}
+.CmAFTitle, .CmClutchTitle{font-size: 13px; font-weight: bold;}
+.CmTOilSpecVal, .CmAfSpecVal, .CmClutchSpecVal{padding:6px 0; text-overflow:ellipsis; overflow:hidden; white-space:nowrap;}
+.CmTOilValue{border-right: 1px solid #b7b7b7; flex-shrink: 0;}
+.CmInnerBlock_3_5{display: grid; grid-template-columns: repeat(4, 1fr); background-color: #f5f5f5;}
+.CmPowerSteerBlock{grid-area: 1/2/2/4; display:grid; align-content: center;}
+.CmPowStInfo{line-height: 18px}
+.CmPowStTitle{font-size: 14px; font-weight: bold;}
+.CmPowStFilInterTitl{font-weight: bold;}
+.CmPowSteerSpecVal{display: flex; align-items: center; font-size: 13px; overflow: hidden; width: fit-content; margin-top: 3px;}
+.CmPowStValue{border-right: 1px solid #b7b7b7; flex-shrink: 0;}
+.CmPowStLitSpec{padding:3px 0; text-align:center; text-overflow:ellipsis; overflow:hidden; white-space:nowrap;}
+.CmPowSteerFilInt{margin-top: 5px;}
+
+
+/* BLOCK - 4 */
+.CmCategWrapBlocks_4{/*grid-area: 4/1/5/5; display: grid; grid-template-columns: repeat(4, 1fr); background-color: #f5f5f5;  border: 1px solid #c7c7c7; padding: 5px 0px;*/display: grid; grid-template-columns: 1fr; width: calc(49% + 1px);}
+.CmBlock_4Inner{display: grid; grid-template-columns: repeat(4, 1fr); background-color: #f5f5f5;  border: 1px solid #c7c7c7; padding: 5px 0px;}
+
+/* BLOCK - 5 */
+.CmCategWrapBlocks_5{display:grid; grid-template-columns:repeat(4, 1fr); justify-items:center; border:0px solid #c7c7c7; padding:5px 0px; width:calc(49% + 1px);}
+.CmInnerBlock_5_1{background-color: #d3d3d3;}
+.CmInnerBlock_5_1 .CmCategSvgImg{width:85%;}
+.CmWheelImg{fill:#b0aeae; width:90%!important;}
+.CmTyreParList{padding:0px 15px 0px 0px; margin:0; line-height:17px; font-size:11px; overflow-y:scroll; overflow-x:hidden;}
+.CmTyreParList::-webkit-scrollbar{width:0.5em; height: 0.5em;}
+.CmTyreParList::-webkit-scrollbar-thumb{background:#b0aeae;}
+.CmTyreParList::-webkit-scrollbar-track{background:#e3e3e3;}
+.CmTireDimensWrap{display:grid; align-content:center;}
+.CmTireDimenMain{font-size: 13px; font-weight: bold;}
+.CmTirePressure{padding:0px 0px 0px 20px; color:#686868; justify-content:center; display:flex; flex-direction:column;}
+.CmUndLn{text-decoration:underline; color:var(--cm-main);}
+.CmTyreDia{color:var(--cm-main);}
+
+
+/* Filter Sections */
+.CmSectionCategWrapBlock{padding:10px 0px 0px 0px; margin:0px -21px 0px -21px; display:flex; justify-content:center; background-color:#f5f5f5; align-items:flex-start;}
+.CmSearchSectionWrapBl{padding:0px 16px 18px 21px; margin:3px 0px 0px 0px; display:flex; flex-direction:column;}
+.CmPadLeft23{padding-left: 28px;}
+.CmSectionBoxWrap{line-height: 20px;}
+.CmSectionBoxWrap a{color: #545454;}
+.CmSecondLevelLink{font-size:12px; position:relative; font-weight:bold; line-height:16px; margin:4px 10px 4px 0px; width:222px;}
+.CmSecondLevelLink.CmActiveItem{color:var(--cm-main);}
+.CmSecondLevelLink:hover{text-decoration:underline!important;}
+.CmThirdLevelList{display: block; margin:0px 0px 8px 0px; padding-left:40px !important; margin:0px!important;}
+.CmThirdLevelItem{line-height:14px; padding:4px 0px;}
+.CmThirdLevelLink{font-family: Arial, Helvetica, sans-serif; font-size: 13px; position: relative; color:var(--cm-main);}
+.CmThirdLevelLink.CmActiveItem{color:var(--cm-main);}
+.CmThirdLevelLink:hover{text-decoration:underline!important;}
+.CmSubLevNameWrap{display:flex; flex-direction: column;}
+.CmSecondLevWrapBl{display: flex;}
+.CmPlusMinusBlock{display:block; width:13px; height:15px; fill:#a1a1a1; cursor:pointer; margin:5px 8px 0px 6px;}
+.CmShowHide{display: none;}
+.CmActiveItem{font-weight: bold; border-bottom-width: 1px; border-bottom-style: solid;}
+.CmThirdSec{}
+
+
+
+/* Warning block */
+.CmNoProdWarn{font-size: 160px;}
+.CmNoProdText{text-align:left; font-size:18px; color:#505050; line-height:26px;}
+span.CmBrandModName{color:#202020; font-size:20px; line-height:30px;}
+.CmToTypesLink{cursor:pointer; font-size:14px!important; color:var(--cm-main);}
+.CmToTypesLink:hover{text-decoration:underline!important;}
+.CmMesNoProd{width:100%; height:100px; display:flex; justify-content:center; align-items:center; text-align:center;}
+
+
+
+/* Media-Query */
+@media screen and (max-width: 1100px){
+	.CmModelNameBlock{font-size:15px;}
+}
+@media screen and (max-width: 992px){
+	.CmFlexBasis45{width:48%;}
+	.CmEngOilTitle{font-size:14px;}
+}
+/* #CmContent main box change - important! */
+@media screen and (max-width:960px){
+	.CmSectionCategWrapBlock{margin:0px 0px 0px 0px;}
+}
+@media screen and (max-width: 800px){
+	.CmFlexBasis45{width:100%;}
+}
+@media screen and (max-width: 710px){
+	.CmMesNoProd{grid-column:unset;}
+    .CmImgModelCar{width:105px; height:55px;}
+}
+@media screen and (max-width: 648px){
+	.CmSecondLevelLink{font-size:17px; width:auto;}
+	.CmThirdLevelLink{font-size:15px;}
+	.CmSectionCategWrapBlock{flex-direction: column;}
+	.CmCategWrapBlock_new{width:80%; align-self:center;}
+}
+@media screen and (max-width: 520px){
+    .CmTitleSearchBlock{flex-direction:column;}
+    .CmTitleSearchBlock{align-items:center;}
+    .CmTitleBox{margin-right:0px;}
+@media screen and (min-width:320px) and (max-width: 480px) {
+	.CmImgModelCar{border-radius:4px; float:right; margin:5px 10px 10px 0px; width:65px; height:65px;}
+	.CmTitleSearchBlock{flex-direction:column; align-items:flex-start;}
+}
+@media screen and (max-width: 710px) {
+    #CmContent h1{font-size:14px; line-height:16px; margin:5px 0px 5px 0px;}
+    #CmContent h1 b{font-size:18px;}
+}
+@media screen and (max-width: 500px) {
+    #CmContent h1{line-height:26px; margin:5px 0px 5px 0px;}
+}
+.CmSearcSectInput .CmInputSect{border-color:var(--cm-main);}
+.CmClearButt:hover{background-color:var(--cm-main);}
+.CmSubLevNameWrap:hover{background-color:var(--cm-light);}
+.CmPlusMinusBlock:hover{fill:var(--cm-main);}
+.CmBoxCarBody{background-color:var(--cm-light); border-color:var(--cm-main);}
+.CmModBodyBl svg{fill:var(--cm-main);}
+.CmInnerBlock_1_2{background-color:var(--cm-light);}
+.CmFuelTankVal{background-color:var(--cm-light);}
+.CmCategSvgImg:hover{fill:var(--cm-main); stroke:var(--cm-main);}
+.CmEngineImg svg{fill:var(--cm-light);}
+.CmEngOilBl:hover{background-color:var(--cm-light);}
+.CmEngOilImg svg{fill:var(--cm-main);}
+.CmEngOilBl:hover .CmEngOilDesc{color:var(--cm-main);}
+.CmSpecLink:hover{background-color:var(--cm-light);}
+.CmTransOilSvgImg:hover{fill:var(--cm-main); stroke:var(--cm-main);}
+.SpNameCol{background-color:var(--cm-main);}
+.SpNameSpanCol{background-color:var(--cm-main);}

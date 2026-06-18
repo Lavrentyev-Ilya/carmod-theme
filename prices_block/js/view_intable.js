@@ -1,0 +1,1 @@
+/* Reserved for table price view behavior. */

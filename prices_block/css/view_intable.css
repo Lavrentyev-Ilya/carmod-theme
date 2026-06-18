@@ -1,0 +1,140 @@
+.CmPricesBlockTableHost .CmProductPriceList-intable{--CmTablePriceDeliveryCol:0px; --CmTablePriceStockCol:0px; --CmTablePriceAvailableCol:0px; --CmTablePriceValueCol:minmax(204px, max-content); width:100%; min-width:0; max-width:100%; border:0!important; border-radius:4px; overflow:visible; background:transparent!important;}
+.CmPricesBlockTableHost .CmProductPriceList-intable:not(.CmProductPriceList-has-stock){width:max-content; min-width:max-content; max-width:none;}
+.CmPricesBlockTableHost .CmProductPriceList-intable.CmProductPriceList-has-delivery{--CmTablePriceDeliveryCol:0px;}
+.CmPricesBlockTableHost .CmProductPriceList-intable.CmProductPriceList-has-stock{--CmTablePriceStockCol:minmax(64px, 1fr);}
+.CmPricesBlockTableHost .CmProductPriceList-intable.CmProductPriceList-has-available{--CmTablePriceAvailableCol:minmax(82px, max-content);}
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmProductPriceHeader{display:none!important; min-height:24px; background:#eeeeee!important; color:#666;}
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmProductPriceHeader .CmProductPriceCell{min-height:24px; background:#eeeeee!important; border-color:#dcdcdc;}
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmProductPriceHeader svg{width:15px!important; height:15px!important;}
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmProductPriceHeader .CmPriceTextTitle{font-size:11px; line-height:14px;}
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmProductPriceRows{gap:0!important;}
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmProductPriceRow{display:grid!important; grid-template-columns:var(--CmTablePriceStockCol) var(--CmTablePriceAvailableCol) var(--CmTablePriceValueCol); justify-content:end; align-items:stretch; border:0!important; border-bottom:1px solid #e1e1e1!important; border-radius:0!important; overflow:visible!important; background:transparent!important;}
+.CmPricesBlockTableHost .CmProductPriceList-intable:not(.CmProductPriceList-has-stock) .CmProductPriceRow{grid-template-columns:var(--CmTablePriceAvailableCol) minmax(204px, max-content); justify-content:end;}
+.CmPricesBlockTableHost .CmProductPriceList-intable:not(.CmProductPriceList-has-stock):not(.CmProductPriceList-has-available) .CmProductPriceRow{grid-template-columns:minmax(204px, max-content);}
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmProductPriceRow:last-child{border-bottom:0;}
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmProductPriceRow:hover,
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmTablePriceValueRow:hover,
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmTablePriceValueRow_2:hover{background:transparent!important; background-color:transparent!important;}
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmProductPriceRow.CmProductPriceRow-hot,
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmProductPriceRow.CmProductPriceRow-hot:hover{background:linear-gradient(0deg,rgba(255,132,35,.24) 0%,rgba(255,229,203,.58) 38%,#ffffff 100%)!important; box-shadow:none!important;}
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmProductPriceRow.CmProductPriceRow-hot > .CmProductPriceCell{background:transparent!important;}
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmProductPriceRow.CmProductPriceRow-hot .CmPriceNum{color:#f26a00!important; text-shadow:0 1px 0 #ffffff, 0 0 8px rgba(255,122,0,.28);}
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmProductPriceRow.CmProductPriceRow-hot .CmPriceCurrency{color:#f26a00!important;}
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmTbodyPrice{border:0!important;}
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmTbodyPrice > .CmProductPriceRow:first-child > .CmProductPriceCell{border-top:0!important;}
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmTbodyPrice > .CmProductPriceRow:last-child{border-bottom:0!important;}
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmTbodyPrice > .CmProductPriceRow > .CmProductPriceCell:first-child{border-left:0!important;}
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmTbodyPrice > .CmProductPriceRow > .CmProductPriceCell:last-child{border-right:0!important;}
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmProductPriceCell{display:flex!important; align-items:flex-start!important; width:auto; min-width:0; max-width:100%; min-height:38px; border-top:0!important; border-bottom:0!important; border-left:0!important; border-right:1px solid #e1e1e1!important; background:transparent!important;}
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmProductPriceCell-delivery{display:none!important; padding:4px!important;}
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmProductPriceCell-stock{grid-column:1; padding:4px 8px!important; align-items:flex-start!important; justify-content:center; overflow:hidden;}
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmProductPriceCell-available{grid-column:2; display:flex; flex-direction:column; align-items:stretch; justify-content:flex-start; gap:2px; padding:4px 4px 0px 4px!important; overflow:visible;}
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmProductPriceCell-svg-options{display:none!important;}
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmProductPriceCell-price{grid-column:3; align-items:flex-start!important; border-right:0; min-width:204px; width:auto; overflow:visible;}
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmPriceChangeQuant{display:flex; flex-direction:column; align-items:flex-end; padding:4px 0px 4px 8px; min-width:204px; width:auto; box-sizing:border-box; overflow:visible;}
+.CmPricesBlockTableHost .CmProductPriceList-intable:not(.CmProductPriceList-has-stock) .CmProductPriceCell-available{grid-column:1;}
+.CmPricesBlockTableHost .CmProductPriceList-intable:not(.CmProductPriceList-has-stock) .CmProductPriceCell-price{grid-column:2; min-width:0; width:100%;}
+.CmPricesBlockTableHost .CmProductPriceList-intable:not(.CmProductPriceList-has-stock):not(.CmProductPriceList-has-available) .CmProductPriceCell-price{grid-column:1;}
+.CmPricesBlockTableHost .CmProductPriceList-intable:not(.CmProductPriceList-has-stock) .CmPriceChangeQuant{min-width:0; width:100%; padding-left:8px;}
+.CmPricesBlockTableHost .CmProductPriceList-intable:not(.CmProductPriceList-has-stock) .CmPriceQuantWrap{justify-content:flex-end!important; width:100%; gap:8px!important;}
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmWrapPriceDiscPage{order:2; display:flex; justify-content:flex-end; width:100%; margin-top:2px;}
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmProductPriceAvailabilityInline{display:grid; grid-template-columns:18px minmax(18px,max-content); align-items:center; justify-content:start; column-gap:4px; width:100%; min-width:max-content; box-sizing:border-box; padding:1px 4px; border:1px solid transparent; color:#505050;}
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmProductPriceAvailabilityIcon{display:flex; align-items:center; justify-content:center; width:18px; min-width:18px; height:18px;}
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmProductPriceAvailabilityIcon svg{display:block; width:16px!important; height:16px!important; margin:0!important;}
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmProductPriceAvailabilityValue{display:flex; align-items:center; justify-content:flex-start; min-width:max-content; line-height:18px; white-space:nowrap;}
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmProductPriceAvailabilityValue .CmListPrAvail{display:inline-flex!important; align-items:center!important; justify-content:center!important; color:var(--cm-main,#fa6a00)!important; line-height:18px!important; margin:0!important;}
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmProductPriceAvailabilityValue .CmListPrAvail b{display:inline-flex!important; align-items:center!important; justify-content:center!important; min-width:9px; color:var(--cm-main,#fa6a00)!important; font:900 15px/18px Arial,Helvetica,sans-serif!important; text-align:center!important;}
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmProductPriceRow[data-cmavnum="0"] .CmProductPriceAvailabilityIcon,
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmProductPriceRow[data-cmavnum="0"] .CmProductPriceAvailabilityIcon svg,
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmProductPriceRow[data-cmavnum="0"] .CmProductPriceAvailabilityIcon svg *,
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmProductPriceRow[data-cmavnum="0"] .CmProductPriceAvailabilityValue,
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmProductPriceRow[data-cmavnum="0"] .CmProductPriceAvailabilityValue *,
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmProductPriceRow[data-cmavnum="0"] .CmListPrAvail,
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmProductPriceRow[data-cmavnum="0"] .CmListPrAvail b{fill:#8a8a8a!important; color:#8a8a8a!important;}
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmProductPriceRow[data-cmavnum="0"] .cm_OutOfStock,
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmProductPriceRow[data-cmavnum="0"] .OutStockImg,
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmProductPriceRow[data-cmavnum="0"] .OutStockImg *{fill:#8a8a8a!important; color:#8a8a8a!important;}
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmProductPriceAvailabilityInline:hover .CmProductPriceAvailabilityValue,
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmProductPriceAvailabilityInline:hover .CmProductPriceAvailabilityValue *,
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmProductPriceAvailabilityInline:hover .CmListPrAvail,
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmProductPriceAvailabilityInline:hover .CmListPrAvail *,
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmProductPriceAvailabilityInline:hover .CmListPrAvail b{color:#000000!important;}
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmProductPriceDeliveryBadge{display:grid; grid-template-columns:18px minmax(18px,max-content); align-items:center; justify-content:start; column-gap:4px; width:100%; max-width:none; min-width:max-content; margin-top:0; padding:1px 4px; border:1px solid #62984c; border-radius:5px; background:#7ab65e; color:#fff; font:500 12px/16px "Roboto Condensed","Arial Narrow",Arial,Helvetica,sans-serif; font-stretch:condensed; white-space:nowrap; box-sizing:border-box; overflow:visible; text-overflow:clip;}
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmProductPriceDeliveryBadge-instock{background:#7ab65e; color:#fff; border-color:#62984c; text-shadow: 1px 1px 3px #464646;}
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmProductPriceRow-hot .CmProductPriceDeliveryBadge-instock{background:#f26a00!important; color:#ffffff!important; border-color:#d45700!important;}
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmProductPriceDeliveryBadge-time{background:var(--cm-light,#fff3e7); color:#000000; border-color:var(--cm-main,#fa6a00);}
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmProductPriceDeliveryBadgeIcon{display:flex; align-items:center; justify-content:center; width:18px; min-width:18px; height:18px; color:inherit;}
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmProductPriceDeliveryBadgeIcon svg{display:block; width:14px; height:14px; fill:currentColor;}
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmProductPriceDeliveryBadge-time .CmProductPriceDeliveryBadgeIcon{width:18px; min-width:18px; height:18px;}
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmProductPriceDeliveryBadge-time .CmProductPriceDeliveryBadgeIcon svg{width:15px; height:15px;}
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmProductPriceDeliveryBadgeText{display:block; min-width:max-content; overflow:visible; text-overflow:clip; white-space:nowrap; text-align:left;}
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmPriceQuantWrap{order:1; display:flex; flex-direction:row; justify-content:flex-end!important; align-items:center!important; gap:8px!important; width:auto; min-width:0;}
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmPriceQuantWrap.CmPriceQuantWrap-showCartText{justify-content:flex-end!important; gap:6px!important;}
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmProductPriceActions{display:contents!important;}
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmQuantPriceBlock{order:1; flex:0 0 auto;}
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmPriceNum{order:2; display:inline-flex; align-items:baseline; font-size:20px; line-height:24px; font-weight:900; margin-right:0;}
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmPriceCurrency{font-size:12px; font-weight:bold; margin-left:2px; color:inherit;}
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmPriceQuantWrap:not(.CmPriceQuantWrap-showCartText) .CmProductPriceCartButton{box-sizing:border-box!important; width:36px!important; min-width:36px!important; max-width:36px!important; height:26px!important; min-height:26px!important; max-height:26px!important; padding:3px 6px!important;}
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmPriceQuantWrap:not(.CmPriceQuantWrap-showCartText) .CmProductPriceMailOrder.CmProductPriceCartButton{width:auto!important; min-width:92px!important; max-width:none!important; padding:3px 10px 2px 8px!important; gap:6px!important;}
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmPriceQuantWrap:not(.CmPriceQuantWrap-showCartText) .CmProductPriceCartButton svg,
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmPriceQuantWrap:not(.CmPriceQuantWrap-showCartText) .CmProductPriceCartButton .cm_HideCartImg{width:16px!important; min-width:16px!important; max-width:16px!important; height:16px!important; max-height:16px!important;}
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmProductPriceCartButton,
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmProductPriceFindLink,
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmProductPriceMailOrder{order:3; flex:0 0 auto;}
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmTablePriceOptions{order:3; align-self:flex-end; justify-content:flex-end!important; width:auto; margin-top:4px; padding:4px 0 0; border-top:0; min-width:0; max-width:none; overflow:visible;}
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmTablePriceOptionsInner{display:inline-flex!important; justify-content:flex-end!important; align-items:center!important; flex-wrap:nowrap!important; gap:4px!important; width:auto!important; min-width:0; max-width:none!important; overflow:visible!important; padding:0!important;}
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmTablePriceOptions .CmOptionView{display:flex; justify-content:flex-end; flex:0 0 auto; max-width:none; min-width:0; margin:0!important; overflow:visible;}
+#CmContent .CmPricesBlockTableHost .CmProductPriceList-intable .CmTablePriceOptions .CmPrOptionText{max-width:100%!important; min-width:0!important;}
+#CmContent .CmPricesBlockTableHost .CmProductPriceList-intable .CmTablePriceOptions .CmPrOptionText.CmPrOptionTextLabeled{display:flex!important; flex-wrap:nowrap!important; align-items:stretch!important; min-height:29px!important; border-radius:5px!important; white-space:nowrap!important; overflow:hidden!important;}
+#CmContent .CmPricesBlockTableHost .CmProductPriceList-intable .CmTablePriceOptions .CmPrOptionText.CmPrOptionTextLabeled .CmPrOptionName{flex:0 1 auto!important; min-width:0!important; white-space:normal!important; overflow-wrap:anywhere!important; text-align:left!important;}
+#CmContent .CmPricesBlockTableHost .CmProductPriceList-intable .CmTablePriceOptions .CmPrOptionText.CmPrOptionTextLabeled .CmPrOptionSep,
+#CmContent .CmPricesBlockTableHost .CmProductPriceList-intable .CmTablePriceOptions .CmPrOptionText.CmPrOptionTextLabeled .CmPrOptionPrefix,
+#CmContent .CmPricesBlockTableHost .CmProductPriceList-intable .CmTablePriceOptions .CmPrOptionText.CmPrOptionTextLabeled .CmPrOptionVal,
+#CmContent .CmPricesBlockTableHost .CmProductPriceList-intable .CmTablePriceOptions .CmPrOptionText.CmPrOptionTextLabeled .CmPrOptionPostfix,
+#CmContent .CmPricesBlockTableHost .CmProductPriceList-intable .CmTablePriceOptions .CmPrOptionText.CmPrOptionTextLabeled .CmPrOptionCurrency{flex:0 0 auto!important;}
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmProductPriceSupplierStock-list{display:flex; flex-direction:row!important; flex-wrap:wrap; align-items:center; justify-content:center; gap:2px 4px; width:100%; min-width:0; overflow:hidden;}
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmProductPriceSupplierStock-list > span{display:inline-flex!important; flex:0 0 auto;}
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmProductPriceSupplierStock-list .CmStockName,
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmProductPriceSupplierStock-list .CmStockNum{flex:1 1 46%; min-width:54px; max-width:100%;}
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmProductPriceSupplierStock-list .CmListPrStock{display:-webkit-box; max-width:100%; overflow:hidden; text-overflow:ellipsis; white-space:normal; overflow-wrap:anywhere; -webkit-line-clamp:2; -webkit-box-orient:vertical; line-height:15px;}
+.CmPricesBlockTableHost .CmProductPriceList-intable .CmProductPriceSupplierStockText{display:block; width:100%; min-width:0; max-width:100%; color:#808080; font-size:11px; line-height:15px; text-align:center; white-space:normal; overflow-wrap:anywhere; hyphens:auto;}
+.CmPricesBlockTableHost .CmTableProductNoStockBlock{display:flex; align-items:center; justify-content:flex-end; width:100%; height:100%; min-width:max-content; max-width:none; box-sizing:border-box; overflow:visible;}
+.CmPricesBlockTableHost .CmTableProductNoStockBlock .CmProductPriceNoStock{display:flex; flex-direction:row; flex-wrap:nowrap; align-items:center; justify-content:flex-end; gap:12px; width:max-content; min-width:max-content; max-width:none; border:0px;}
+.CmPricesBlockTableHost .CmTableProductNoStockBlock .cmNoInStock{display:inline-flex; flex:0 0 auto; align-items:center; justify-content:center; gap:6px; width:max-content; min-width:max-content; max-width:none; height:34px; min-height:34px; max-height:34px; margin:0!important; padding:0 10px!important; box-sizing:border-box; border-color:#d2d2d2!important; color:#777!important; background:#fafafa!important; box-shadow:none!important; line-height:18px; white-space:nowrap!important; transition:border-color .2s, box-shadow .2s;}
+.CmPricesBlockTableHost .CmTableProductNoStockBlock .cmNoInStock span{display:inline-flex; flex:0 0 auto; align-items:center; white-space:nowrap!important;}
+.CmPricesBlockTableHost .CmTableProductNoStockBlock .cmNoInStock:hover{border-color:var(--cm-main)!important;}
+.CmPricesBlockTableHost .CmTableProductNoStockBlock .cmNoInStock svg{display:block; flex:0 0 24px; width:18px; height:18px; margin:3px; transition:width .2s, height .2s, margin .2s;}
+.CmPricesBlockTableHost .CmTableProductNoStockBlock .cmNoInStock:hover svg{width:24px; height:24px; margin:0px 4px 0px 2px;}
+.CmPricesBlockTableHost .CmTableProductNoStockBlock .CmAksNotAvWrapBl{display:inline-flex!important; flex-direction:row!important; align-items:center; justify-content:center; gap:12px; margin:0!important;}
+.CmPricesBlockTableHost .CmTableProductNoStockBlock .ListAskPrice{display:inline-flex; align-items:center; justify-content:center; gap:6px; height:34px; min-height:34px; max-height:34px; margin:0!important; padding:0 10px!important; box-sizing:border-box; border:1px solid #d2d2d2!important; border-radius:4px; background:#fafafa!important; box-shadow:none!important; line-height:18px; transition:background .2s, color .2s, fill .2s, border-color .2s, box-shadow .2s;}
+.CmPricesBlockTableHost .CmTableProductNoStockBlock .ListAskPrice:hover{border-color:#4f9d58!important; background:linear-gradient(0deg,#3d9146,#72bf78)!important; color:#fff!important; fill:#fff!important; box-shadow:0 2px 5px rgba(0,0,0,.22), inset 0 1px 0 rgba(255,255,255,.35)!important;}
+.CmPricesBlockTableHost .CmTableProductNoStockBlock .ListAskPrice:hover svg,
+.CmPricesBlockTableHost .CmTableProductNoStockBlock .ListAskPrice:hover .CmAskImg{fill:#fff!important;}
+.CmPricesBlockTableHost .CmTableProductNoStockBlock .CmProductPriceOrderButton.CmProductPriceCartButton{display:inline-flex!important; align-items:center!important; justify-content:center!important; width:auto!important; min-width:92px!important; max-width:none!important; height:34px!important; min-height:34px!important; max-height:34px!important; margin:0!important; padding:0 10px!important; gap:6px!important;}
+.CmPricesBlockTableHost .CmTableProductNoStockBlock .CmProductPriceOrderButton.CmProductPriceCartButton > span{display:inline-flex!important; align-items:center!important; color:#ffffff!important; font:700 12px/18px Arial,Helvetica,sans-serif!important; white-space:nowrap!important;}
+.CmPricesBlockTableHost .CmTableProductNoStockBlock .CmProductPriceOrderButton.CmProductPriceCartButton .cm_cartImg,
+.CmPricesBlockTableHost .CmTableProductNoStockBlock .CmProductPriceOrderButton.CmProductPriceCartButton .cm_cartImg_t{display:block!important; position:relative!important; left:auto!important; top:auto!important; width:18px!important; min-width:18px!important; max-width:18px!important; height:18px!important; max-height:18px!important; margin:0!important; padding:0!important; fill:#ffffff!important;}
+@media screen and (max-width:648px){
+    .CmPricesBlockTableHost .CmProductPriceList-intable{--CmTablePriceValueCol:minmax(236px, 1fr); width:100%; min-width:0; max-width:100%;}
+    .CmPricesBlockTableHost .CmProductPriceList-intable:not(.CmProductPriceList-has-stock){width:100%; min-width:0; max-width:100%;}
+    .CmPricesBlockTableHost .CmProductPriceList-intable.CmProductPriceList-has-delivery{--CmTablePriceDeliveryCol:0px;}
+    .CmPricesBlockTableHost .CmProductPriceList-intable.CmProductPriceList-has-stock{--CmTablePriceStockCol:minmax(58px, 1fr);}
+    .CmPricesBlockTableHost .CmProductPriceList-intable.CmProductPriceList-has-available{--CmTablePriceAvailableCol:minmax(74px, max-content);}
+    .CmPricesBlockTableHost .CmProductPriceList-intable:not(.CmProductPriceList-has-stock) .CmProductPriceRow{grid-template-columns:var(--CmTablePriceAvailableCol) minmax(236px, 1fr); justify-content:stretch;}
+    .CmPricesBlockTableHost .CmProductPriceList-intable:not(.CmProductPriceList-has-stock):not(.CmProductPriceList-has-available) .CmProductPriceRow{grid-template-columns:minmax(236px, 1fr); justify-content:stretch;}
+    .CmPricesBlockTableHost .CmProductPriceList-intable .CmProductPriceDeliveryBadge{max-width:none; padding:2px 6px; font-size:11px; line-height:15px; overflow:visible; text-overflow:clip;}
+    .CmPricesBlockTableHost .CmProductPriceList-intable .CmPriceQuantWrap{gap:6px!important;}
+    .CmPricesBlockTableHost .CmProductPriceList-intable .CmProductPriceCell-price{align-items:stretch!important; min-width:0; width:100%;}
+    .CmPricesBlockTableHost .CmProductPriceList-intable .CmPriceChangeQuant{align-items:flex-end!important; width:100%; min-width:0; padding-left:6px;}
+    .CmPricesBlockTableHost .CmProductPriceList-intable .CmPriceQuantWrap{justify-content:flex-end!important; width:100%; min-width:0;}
+    .CmPricesBlockTableHost .CmProductPriceList-intable .CmWrapPriceDiscPage,
+    .CmPricesBlockTableHost .CmProductPriceList-intable .CmTablePriceOptions{width:100%; justify-content:flex-end!important;}
+    .CmPricesBlockTableHost .CmProductPriceList-intable.CmProductPriceList-has-stock .CmQuantPriceBlock{display:none!important;}
+    .CmPricesBlockTableHost .CmProductPriceList-intable .CmPriceQuantWrap:not(.CmPriceQuantWrap-showCartText) .CmProductPriceCartButton,
+    .CmPricesBlockTableHost .CmProductPriceList-intable .CmPriceQuantWrap .CmProductPriceCartButton{width:auto!important; min-width:92px!important; max-width:none!important; height:28px!important; min-height:28px!important; max-height:30px!important; padding:4px 10px 4px 8px!important; gap:6px!important;}
+    .CmPricesBlockTableHost .CmProductPriceList-intable .CmPriceQuantWrap:not(.CmPriceQuantWrap-showCartText) .CmProductPriceCartButton svg,
+    .CmPricesBlockTableHost .CmProductPriceList-intable .CmPriceQuantWrap:not(.CmPriceQuantWrap-showCartText) .CmProductPriceCartButton .cm_HideCartImg,
+    .CmPricesBlockTableHost .CmProductPriceList-intable .CmPriceQuantWrap .CmProductPriceCartButton svg,
+    .CmPricesBlockTableHost .CmProductPriceList-intable .CmPriceQuantWrap .CmProductPriceCartButton .cm_HideCartImg{width:18px!important; min-width:18px!important; max-width:18px!important; height:18px!important; max-height:18px!important;}
+    .CmPricesBlockTableHost .CmProductPriceList-intable .CmProductPriceCartText{display:inline-flex!important; position:relative; z-index:1; max-width:86px!important; opacity:1!important; margin-left:0!important; color:#ffffff!important; font:700 12px/18px Arial,Helvetica,sans-serif!important; white-space:nowrap!important;}
+}

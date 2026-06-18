@@ -1,0 +1,1 @@
+/* Reserved for grid price view behavior. */
