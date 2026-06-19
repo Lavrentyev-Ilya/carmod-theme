@@ -84,36 +84,7 @@ h1.CmH1Types{align-self:center; font-family:Calibri!important; text-overflow:ell
 	text-shadow:none!important;
 }
 .CmBrTitleSearchWrap h1 b{color:var(--ink-900)!important; font-weight:600;}
-/* Хлебные крошки — аккуратная белая «таблетка» вместо текстовой вставки */
-.CmBreadCrumbs{
-	display:inline-flex!important;
-	align-items:center;
-	flex-wrap:wrap;
-	gap:0!important;
-	width:auto!important;
-	margin:var(--space-1) 0 0!important;
-	padding:var(--space-2) var(--space-3)!important;
-	background:var(--bg-000)!important;
-	border:1px solid var(--ink-300)!important;
-	border-radius:var(--radius-ctrl)!important;
-	font-family:var(--font-ui)!important;
-	font-size:12px!important;
-	line-height:16px!important;
-	color:var(--ink-500)!important;
-	text-shadow:none!important;
-}
-.CmBreadCrumbs a{color:var(--ink-500)!important; transition:color .15s ease;}
-.CmBrCrItem:hover a, .CmBreadCrumbs a:hover .CmColorTxh{color:var(--accent-500)!important;}
-.CmBrCrItem, .CmLastBcItem{text-shadow:none!important;}
-.CmBrCrItem span, .CmLastItemTxt{padding:0 var(--space-2)!important;}
-.CmBrCrItem:first-child span{padding:0 var(--space-2) 0 0!important;}
-/* Домик */
-.CmBcHomeIcon{fill:var(--ink-500)!important; width:14px!important; height:14px!important; padding:0!important;}
-.CmBcHomeIcon:hover{fill:var(--accent-500)!important;}
-/* Шеврон-разделитель */
-.CmBrCrArrow{fill:var(--ink-300)!important; width:7px!important; height:7px!important; padding:0!important;}
-/* Текущая страница — тёмная, плотная */
-.CmLastBcItem, .CmLastItemTxt{color:var(--ink-900)!important; font-weight:600!important;}
+/* Хлебные крошки теперь стилизованы глобально в common.css */
 
 /* --- Контейнер таблицы --- */
 .CmTypesWrap{background:transparent!important; margin:0!important; padding:0!important;}

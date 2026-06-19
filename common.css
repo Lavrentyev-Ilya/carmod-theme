@@ -1466,3 +1466,38 @@ html, body,
 ::-webkit-scrollbar-thumb:hover {
     background-color:#9f9f9f;
 }
+
+
+/* ============================================================= */
+/* ===  REDESIGN 2026 (DESIGN.md) — глобальные компоненты  ===== */
+/* ============================================================= */
+
+/* Хлебные крошки — аккуратная белая «таблетка» вместо текстовой вставки.
+   Стиль общий для всех страниц каталога (§7.4). */
+.CmBreadCrumbs{
+	display:inline-flex!important;
+	align-items:center;
+	flex-wrap:wrap;
+	gap:0!important;
+	width:auto!important;
+	margin:var(--space-1) 0 var(--space-4)!important;
+	padding:var(--space-2) var(--space-3)!important;
+	background:var(--bg-000)!important;
+	border:1px solid var(--ink-300)!important;
+	border-radius:var(--radius-ctrl)!important;
+	font-family:var(--font-ui)!important;
+	font-size:12px!important;
+	line-height:16px!important;
+	color:var(--ink-500)!important;
+	text-shadow:none!important;
+}
+.CmBreadCrumbs a{color:var(--ink-500)!important; transition:color .15s ease;}
+.CmBrCrItem:hover a,
+.CmBrCrItem:hover a .CmColorTxh{color:var(--accent-500)!important;}
+.CmBrCrItem, .CmLastBcItem{text-shadow:none!important;}
+.CmBrCrItem span, .CmLastItemTxt{padding:0 var(--space-2)!important;}
+.CmBrCrItem:first-child span{padding:0 var(--space-2) 0 0!important;}
+.CmBcHomeIcon{fill:var(--ink-500)!important; width:14px!important; height:14px!important; padding:0!important;}
+.CmBcHomeIcon:hover{fill:var(--accent-500)!important;}
+.CmBrCrArrow{fill:var(--ink-300)!important; width:7px!important; height:7px!important; padding:0!important;}
+.CmLastBcItem, .CmLastItemTxt{color:var(--ink-900)!important; font-weight:600!important;}

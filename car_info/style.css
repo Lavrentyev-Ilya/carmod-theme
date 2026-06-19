@@ -253,3 +253,188 @@ span.CmBrandModName{color:#202020; font-size:20px; line-height:30px;}
 .CmTransOilSvgImg:hover{fill:var(--cm-main); stroke:var(--cm-main);}
 .SpNameCol{background-color:var(--cm-main);}
 .SpNameSpanCol{background-color:var(--cm-main);}
+
+
+/* ============================================================= */
+/* ===============  REDESIGN 2026 (DESIGN.md)  ================= */
+/* Страница информации об автомобиле. Визуальный слой, токены.    */
+/* ============================================================= */
+
+/* --- Поверхность страницы --- */
+#CmContent:has(.CmSectionCategWrapBlock){
+	background:var(--bg-100)!important;
+	box-shadow:none!important;
+	border:none!important;
+	padding:var(--space-6) var(--space-8) var(--space-8)!important;
+	font-family:var(--font-ui)!important;
+	font-feature-settings:'tnum' 1;
+	color:var(--ink-700);
+}
+
+/* --- Заголовок-плашка --- */
+.CmBrTitleSearchWrap.CmBrTitleSearchWrapLight,
+.CmBrTitleSearchWrap{
+	margin:0 0 var(--space-2)!important;
+	padding:var(--space-4)!important;
+	background:var(--bg-000)!important;
+	border:1px solid var(--ink-300)!important;
+	border-left:3px solid var(--accent-500)!important;
+	border-radius:var(--radius-card)!important;
+	box-shadow:var(--shadow-card)!important;
+	border-top-width:1px!important;
+}
+.CmBrTitleSearchWrap h1,
+#CmTitlH1Page h1{
+	font-family:var(--font-ui)!important;
+	font-weight:600!important;
+	font-size:18px!important;
+	line-height:26px!important;
+	color:var(--ink-900)!important;
+	text-shadow:none!important;
+}
+
+/* --- Раскладка: сайдбар + контент --- */
+.CmSectionCategWrapBlock{
+	background:transparent!important;
+	margin:0!important;
+	padding:0!important;
+	gap:var(--space-6);
+}
+
+/* --- Левый сайдбар: дерево разделов (§7.6) --- */
+.CmSearchSectionWrapBl{padding:0!important; margin:0!important;}
+.CmBrSearchWrap{background:transparent!important; width:259px; margin-bottom:var(--space-3)!important;}
+.CmTitleSearchBlock{padding:0!important; width:100%!important;}
+
+/* Поиск раздела */
+.CmSearcSectInput .CmInputSect{
+	width:100%!important;
+	height:38px!important;
+	line-height:38px!important;
+	text-transform:none!important;
+	font-weight:400!important;
+	font-size:13px!important;
+	border:1px solid var(--ink-300)!important;
+	border-radius:var(--radius-ctrl)!important;
+	box-shadow:none!important;
+	color:var(--ink-700)!important;
+	background:var(--bg-000)!important;
+	padding:0 var(--space-3)!important;
+	transition:border-color .15s ease, box-shadow .15s ease;
+}
+.CmSearcSectInput .CmInputSect:focus{
+	border-color:var(--accent-500)!important;
+	box-shadow:0 0 0 3px var(--accent-100)!important;
+}
+
+/* Строка раздела 2-го уровня */
+.CmSubLevNameWrap{border-radius:var(--radius-ctrl);}
+.CmSubLevNameWrap:hover{background-color:transparent!important;}
+.CmSecondLevWrapBl{
+	align-items:center;
+	padding:var(--space-2) var(--space-3);
+	border-radius:var(--radius-ctrl);
+	transition:background .15s ease;
+}
+.CmSecondLevWrapBl:hover{background:var(--bg-100);}
+.CmSecondLevWrapBl:has(.CmActiveItem){background:var(--accent-100);}
+
+/* Текст пунктов */
+.CmSectionBoxWrap a{color:var(--ink-700)!important;}
+.CmSecondLevelLink{
+	font-family:var(--font-ui)!important;
+	font-weight:600!important;
+	color:var(--ink-900)!important;
+}
+.CmSecondLevelLink:hover{text-decoration:none!important; color:var(--accent-500)!important;}
+.CmSecondLevelLink.CmActiveItem{color:var(--accent-500)!important; border-bottom:none!important;}
+.CmActiveItem{border-bottom:none!important;}
+
+/* Третий уровень */
+.CmThirdLevelList{padding-left:34px!important;}
+.CmThirdLevelItem{padding:var(--space-1) 0!important;}
+.CmThirdLevelLink{
+	font-family:var(--font-ui)!important;
+	color:var(--ink-700)!important;
+}
+.CmThirdLevelLink:hover{text-decoration:none!important; color:var(--accent-500)!important;}
+.CmThirdLevelLink.CmActiveItem{color:var(--accent-500)!important; font-weight:600;}
+
+/* Шеврон вместо квадратов +/- */
+.CmPlusMinusBlock{
+	width:auto!important;
+	height:auto!important;
+	fill:none!important;
+	color:var(--ink-500)!important;
+	margin:0 var(--space-2) 0 0!important;
+	display:flex!important;
+	align-items:center;
+}
+.CmPlusMinusBlock:hover{fill:none!important; color:var(--accent-500)!important;}
+.CmChevron{width:14px; height:14px; stroke:currentColor;}
+.CmSecondLevWrapBl:has(.CmActiveItem) .CmPlusMinusBlock,
+.CmSecondLevWrapBl:has(.CmActiveItem) .CmSecondLevelLink{color:var(--accent-500)!important;}
+
+/* --- Правый блок и карточки --- */
+.CmCategWrapBlock_new{background:transparent!important; padding:0!important;}
+
+.CmBoxCarBody, .CmBoxCarEngine{
+	background-color:var(--bg-000)!important;
+	border:1px solid var(--ink-300)!important;
+	border-radius:var(--radius-card)!important;
+	box-shadow:var(--shadow-card)!important;
+	overflow:hidden;
+}
+.CmInnerBlock_1_1, .CmInnerBlockGen, .CmInnerBlock_1_2{background-color:var(--bg-000)!important;}
+.CmInnerBlock_2_1{background-color:var(--bg-100)!important; border-bottom:1px solid var(--ink-300)!important;}
+
+/* Заголовки карточек: имя/тип/год */
+.CmModelNameTxt{color:var(--ink-900)!important; font-weight:600;}
+.CmTypeNameTxt{color:var(--ink-700)!important;}
+.CmVdsTxt{color:var(--ink-500)!important;}
+.CmModelYearTxt{color:var(--ink-500)!important;}
+/* Иконку машины (тип кузова) НЕ перекрашиваем — остаётся как было */
+.CmBodyDriveType{color:var(--ink-500)!important;}
+.CmFuelTankVal, .CmFuelTankVal span{background-color:var(--bg-000)!important; color:var(--ink-500)!important;}
+
+/* Карточка двигателя */
+.CmEInfTxt1{color:var(--ink-900)!important; text-shadow:none!important;}
+.CmEInfTxt2{color:var(--ink-700)!important;}
+.CmEInfTxt2 b{color:var(--ink-900)!important;}
+.CmFuelTypeTxt{color:var(--accent-500)!important;}
+.CmEngTypeTxt2{color:var(--ink-500)!important;}
+/* Иконку двигателя (контур) НЕ перекрашиваем — остаётся как было */
+.CmEngOilTitle, .CmTOilTitle{color:var(--ink-900)!important;}
+.CmEngOilDesc{color:var(--ink-500)!important;}
+
+/* Плитки-ярлыки разделов */
+.CmCategSvgImg{
+	fill:var(--ink-500);
+	stroke:var(--ink-500);
+	border-radius:var(--radius-ctrl);
+	transition:background .15s ease, fill .15s ease, stroke .15s ease;
+}
+.CmCategSvgImg:hover{
+	fill:var(--accent-500)!important;
+	stroke:var(--accent-500)!important;
+	background:var(--bg-100);
+}
+.CmEngOilBl:hover{background-color:var(--bg-100)!important;}
+.CmEngOilImg svg{fill:var(--ink-500)!important;}
+.CmEngOilBl:hover .CmEngOilDesc{color:var(--ink-700)!important;}
+.CmSpecLink:hover{background-color:var(--bg-100)!important;}
+
+/* Спец-блоки (жидкости, давление шин) */
+.CmInnerBlockG{background-color:var(--bg-000)!important; border:1px solid var(--ink-300)!important; border-radius:var(--radius-ctrl);}
+.CmInnerBlockHov:hover{background-color:var(--bg-100)!important;}
+.CmUndLn, .CmTyreDia{color:var(--accent-500)!important;}
+.CmTireDimenMain{color:var(--ink-900)!important;}
+
+/* VIN-плашка */
+.CmVinPlate{border:1px solid var(--ink-300)!important; border-radius:var(--radius-badge); overflow:hidden;}
+.CmVinTx{background:var(--ink-700)!important; color:#fff!important;}
+.CmVinValue{color:var(--ink-900)!important; font-weight:600;}
+
+/* Блок «нет товаров» */
+.CmToTypesLink{color:var(--accent-500)!important;}
+.CmNoProdText{color:var(--ink-700)!important;}

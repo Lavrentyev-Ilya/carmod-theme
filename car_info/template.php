@@ -117,18 +117,10 @@ $SchemeSVG = '<svg x="0px" y="0px" width="14px" height="14px" viewBox="0 0 488.3
 </svg>';
 
 $aListSVG = [
-        'CmPlus' => '<svg viewBox="0 0 512 512">
-        <path class="ImgPlus" d="M106.667,277.333h128v128c0,11.782,9.551,21.333,21.333,21.333s21.333-9.551,21.333-21.333v-128h128
-        c11.782,0,21.333-9.551,21.333-21.333s-9.551-21.333-21.333-21.333h-128v-128c0-11.782-9.551-21.333-21.333-21.333
-        s-21.333,9.551-21.333,21.333v128h-128c-11.782,0-21.333,9.551-21.333,21.333S94.885,277.333,106.667,277.333z"/>
-        <path d="M490.667,0H21.333C9.551,0,0,9.551,0,21.333v469.333C0,502.449,9.551,512,21.333,512h469.333
-        c11.782,0,21.333-9.551,21.333-21.333V21.333C512,9.551,502.449,0,490.667,0z M469.333,469.333H42.667V42.667h426.667V469.333z"
-        /></svg>',
-
-        'CmMinus' => '<svg viewBox="0 0 330 330">
-        <path id="XMLID_89_" class="ImgMinus" d="M315,0H15C6.716,0,0,6.716,0,15v300c0,8.284,6.716,15,15,15h300c8.284,0,15-6.716,15-15V15
-        C330,6.716,323.284,0,315,0z M300,300H30V30h270V300z"/>
-        <path id="XMLID_92_" d="M75,180h180c8.284,0,15-6.716,15-15s-6.716-15-15-15H75c-8.284,0-15,6.716-15,15S66.716,180,75,180z"/></svg>',
+        // Свёрнуто: шеврон вправо
+        'CmPlus' => '<svg class="CmChevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>',
+        // Развёрнуто: шеврон вниз
+        'CmMinus' => '<svg class="CmChevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>',
 ];
 ?>
 <div class="CmTopBox">
