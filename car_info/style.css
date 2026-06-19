@@ -225,6 +225,7 @@ span.CmBrandModName{color:#202020; font-size:20px; line-height:30px;}
     .CmTitleSearchBlock{flex-direction:column;}
     .CmTitleSearchBlock{align-items:center;}
     .CmTitleBox{margin-right:0px;}
+}
 @media screen and (min-width:320px) and (max-width: 480px) {
 	.CmImgModelCar{border-radius:4px; float:right; margin:5px 10px 10px 0px; width:65px; height:65px;}
 	.CmTitleSearchBlock{flex-direction:column; align-items:flex-start;}
