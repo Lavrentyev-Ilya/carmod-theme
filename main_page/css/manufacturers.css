@@ -345,8 +345,9 @@
 .CmLogoCont{border-bottom:1px solid var(--ink-300);}
 .CmLogoCont .CmBrLo{border-radius:var(--radius-ctrl);}
 .CmLogoCont .CmBrLo:hover{
-	border:1px solid var(--accent-500)!important;
-	background-color:var(--accent-100)!important;
+	background-color:var(--bg-000)!important;
+	border:1px solid var(--ink-300)!important;
+	box-shadow:var(--shadow-card)!important;
 }
 
 /* Brand tiles */
@@ -361,8 +362,7 @@
 	transition:border-color .15s ease, color .15s ease, background .15s ease!important;
 }
 .CmSecBrand:hover{
-	background:var(--bg-000)!important;
-	border-color:var(--ink-300)!important;
-	color:var(--ink-900)!important;
-	box-shadow:var(--shadow-card)!important;
+	background:var(--accent-100)!important;
+	border-color:var(--accent-500)!important;
+	color:var(--accent-600)!important;
 }
