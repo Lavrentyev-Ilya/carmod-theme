@@ -41,7 +41,7 @@ $BLOCK = $aSets['TEMPLATE_BLOCK'];
 							<div class="CmFiltersInner">
 								<div class="fByName">
 									<div class="fByNameButs">
-										<div class="CmActFB CmFtColorCmColor-fff" data-alllang="<?=Lng_x('All')?>"><?=Lng_x('All')?></div>
+										<div class="CmActFB CmFtColor CmColor-fff" data-alllang="<?=Lng_x('All')?>"><?=Lng_x('All')?></div>
 										<?foreach($aModUn as $firstLett){?>
 											<div class="CmModFirstLett"><?=$firstLett?></div>
 										<?}?>
@@ -99,7 +99,13 @@ $BLOCK = $aSets['TEMPLATE_BLOCK'];
     </div>
 </div>
 <div class="CmBrTitleSearchWrap">
-    <div id="CmTitlH1Page"><h1 class=""><?=H1_x?></h1></div>
+    <div id="CmTitlH1Page"><h1 class=""><?
+		$H1_Prts = explode('-', H1_x, 2);
+		if(count($H1_Prts) === 2){
+			echo '<b>'.trim($H1_Prts[0]).'</b> — '.trim($H1_Prts[1]);
+		}else{
+			echo '<b>'.H1_x.'</b>';
+		}?></h1></div>
 </div>
 <?BreadCrumbs_x(); // Edit in: ../templates/default/includes.php ?>
 <div class="CmTitleModelBlock">

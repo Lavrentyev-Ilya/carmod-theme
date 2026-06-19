@@ -144,3 +144,150 @@ div.CmColor-fff{color:#ffffff !important;}
     .cm_modCont{margin:10px;}
     .cmHeadBox{width:auto;}
 }
+
+
+/* ============================================================= */
+/* ===============  REDESIGN 2026 (DESIGN.md)  ================= */
+/* Страница выбора модели. Визуальный слой, токены из colors.php */
+/* ============================================================= */
+
+/* --- Поверхность страницы: нейтральный фон, без тяжёлой коробки --- */
+#CmContent:has(.CmTitleModelBlock){
+	background:var(--bg-100)!important;
+	box-shadow:none!important;
+	border:none!important;
+	padding:var(--space-6) var(--space-8) var(--space-8)!important;
+	font-family:var(--font-ui)!important;
+	font-feature-settings:'tnum' 1;
+	color:var(--ink-700);
+}
+
+/* --- Верхний фильтр-блок → белая карточка --- */
+.CmHeadBox{margin:0!important; padding:0!important;}
+.CmFilterSwitchWrap{
+	background:var(--bg-000);
+	border:1px solid var(--ink-300);
+	border-radius:var(--radius-card);
+	box-shadow:var(--shadow-card);
+	padding:var(--space-6);
+	margin-bottom:var(--space-6);
+}
+.CmTitleBox{margin-bottom:0;}
+.CmLetYearFilterBl{padding-bottom:0;}
+
+/* Логотип бренда → аккуратный круглый чип */
+.CmLetYearFilterBl > .cmProdLogo{
+	width:56px!important;
+	height:56px!important;
+	margin-right:var(--space-4)!important;
+	border:1px solid var(--ink-300);
+	border-radius:50%;
+	background-size:62%!important;
+	background-color:var(--bg-000);
+}
+
+/* Буквенный фильтр (All 1 2 3 … X Z) */
+.fByNameButs{display:flex; flex-wrap:wrap; gap:var(--space-1); margin-bottom:0;}
+.fByNameButs div{
+	box-shadow:none!important;
+	color:var(--ink-700)!important;
+	border:1px solid transparent;
+	border-radius:var(--radius-badge);
+	height:28px!important;
+	line-height:26px!important;
+	margin:0!important;
+	transition:background .15s ease, color .15s ease, border-color .15s ease;
+}
+.fByNameButs div:hover{background-color:var(--bg-100)!important;}
+/* Активная плитка (JS вешает CmFtColor) — светлый акцентный фон */
+.fByNameButs div.CmFtColor{
+	background-color:var(--accent-100)!important;
+	color:var(--accent-600)!important;
+	border-color:var(--accent-500)!important;
+}
+/* Перебиваем глобальный белый текст активной плитки на акцентный */
+.fByNameButs div.CmColor-fff{color:var(--accent-600)!important;}
+
+/* Кнопка-дропдаун «Год» */
+.CmYearGrBl{
+	border:1px solid var(--ink-300)!important;
+	border-radius:var(--radius-ctrl);
+	color:var(--ink-700);
+	font-size:14px;
+	transition:border-color .15s ease;
+}
+.CmYearGrBl:hover{border-color:var(--accent-500)!important;}
+.CmYArrSvg{fill:var(--ink-500);}
+.CmYearItem{
+	border:1px solid var(--ink-300)!important;
+	border-radius:var(--radius-ctrl);
+	box-shadow:var(--shadow-popup)!important;
+	background:var(--bg-000)!important;
+}
+.CmYearItem .fYear{border-bottom:none; color:var(--ink-700);}
+.fYear:hover{background:var(--accent-100)!important; color:var(--accent-600)!important; border-bottom:none;}
+
+/* Список названий моделей под фильтром */
+ul.CmNameFItems{margin-top:var(--space-3);}
+li.CmNFiltItem, li.CmNFiltItem2{color:var(--ink-700)!important; padding:var(--space-1) 0;}
+li.CmNFiltItem:hover, li.CmNFiltItem2:hover{color:var(--accent-500)!important;}
+.CmActiveFilItem{color:var(--accent-500)!important;}
+.CmShowNames, .CmHideNames{color:var(--ink-500)!important; margin-top:var(--space-2);}
+.CmShowNames:hover, .CmHideNames:hover{color:var(--accent-500)!important;}
+.CmModelTitl:hover{color:var(--accent-500);}
+
+/* --- Заголовок-плашка «BMW — выбор модели» --- */
+.CmBrTitleSearchWrap{
+	margin:0 0 var(--space-2)!important;
+	padding:var(--space-4) var(--space-4) var(--space-4) var(--space-4)!important;
+	background:var(--bg-000)!important;
+	border:1px solid var(--ink-300)!important;
+	border-left:3px solid var(--accent-500)!important;
+	border-radius:var(--radius-card)!important;
+	box-shadow:var(--shadow-card)!important;
+}
+.CmBrTitleSearchWrap h1,
+#CmTitlH1Page h1{
+	font-family:var(--font-ui)!important;
+	font-weight:400!important;
+	font-size:18px!important;
+	line-height:26px!important;
+	color:var(--ink-500)!important;
+	text-shadow:none!important;
+}
+.CmBrTitleSearchWrap h1 b{color:var(--ink-900)!important; font-weight:600;}
+
+/* Хлебные крошки под плашкой */
+.CmBreadCrumbs{background-color:transparent!important; color:var(--ink-500)!important;}
+
+/* --- Сетка карточек моделей --- */
+.CmTitleModelBlock{background:transparent!important; margin:0!important; padding:var(--space-4) 0 0!important;}
+.boxMod{gap:var(--space-4); grid-template-columns:repeat(auto-fill, minmax(150px, 1fr));}
+
+.ModBox{
+	margin:0!important;
+	background-color:var(--bg-000);
+	border:1px solid var(--ink-300)!important;
+	border-radius:var(--radius-card)!important;
+	box-shadow:var(--shadow-card)!important;
+	font-family:var(--font-ui)!important;
+	transition:box-shadow .2s ease, border-color .2s ease, transform .2s ease!important;
+}
+.ModBox:hover{
+	border-color:var(--accent-100)!important;
+	box-shadow:var(--shadow-card-hover)!important;
+	transform:translateY(-2px);
+}
+/* Имя модели — акцентный текст, тип кузова — серый */
+.ModName{background:transparent!important; padding:var(--space-2) var(--space-2) 0!important; text-align:center;}
+.ModBox .CmModTitleN{color:var(--accent-500)!important; font-weight:600; font-size:15px;}
+.ModName i{color:var(--ink-500)!important; font-size:11px; font-style:italic;}
+/* Hover больше не заливает имя оранжевым */
+.ModBox:hover .ModName{background-color:transparent!important;}
+.ModBox:hover .CmModTitleN{color:var(--accent-600)!important;}
+.ModBox:hover .ModName i{color:var(--ink-500)!important;}
+.ModBox:hover .ModYear{color:var(--ink-900)!important;}
+.ModBox:hover .ModVDS{color:var(--ink-500)!important;}
+/* Год и VDS снизу */
+.ModYear{color:var(--ink-700)!important; font-weight:600; font-style:normal;}
+.ModVDS{color:var(--ink-500)!important;}
