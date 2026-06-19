@@ -1085,3 +1085,189 @@ div.CmClearButt:hover svg{fill:var(--cm-main);}
 .PosR, .PosL{fill:var(--cm-main);}
 .CmProdNameLink:hover{color:var(--cm-main);}
 .CmProdNameLink:hover h2{color:var(--cm-main);}
+
+
+/* ============================================================= */
+/* ===============  REDESIGN 2026 (DESIGN.md)  ================= */
+/* Страница списка товаров. Визуальный слой, токены из colors.php */
+/* Прайс/корзина/наличие рендерит модуль prices_block (отдельно). */
+/* ============================================================= */
+
+/* --- Поверхность страницы --- */
+#CmContent:has(.CmWrapFlexBlock){
+	background:var(--bg-100)!important;
+	box-shadow:none!important;
+	border:none!important;
+	padding:var(--space-6) var(--space-8) var(--space-8)!important;
+	font-family:var(--font-ui)!important;
+	font-feature-settings:'tnum' 1;
+	color:var(--ink-700);
+}
+
+/* --- Заголовок-плашка --- */
+.CmBrTitleSearchWrap.CmBrTitleSearchWrapLight,
+.CmBrTitleSearchWrap{
+	margin:0 0 var(--space-2)!important;
+	padding:var(--space-4)!important;
+	background:var(--bg-000)!important;
+	border:1px solid var(--ink-300)!important;
+	border-left:3px solid var(--accent-500)!important;
+	border-radius:var(--radius-card)!important;
+	box-shadow:var(--shadow-card)!important;
+	border-top-width:1px!important;
+}
+.CmBrTitleSearchWrap h1, #CmTitlH1Page h1{
+	font-family:var(--font-ui)!important;
+	font-weight:600!important; font-size:18px!important; line-height:26px!important;
+	color:var(--ink-900)!important; text-shadow:none!important;
+}
+
+/* --- Панель сортировки / вид / количество --- */
+.CmSortFilterBlock{margin-bottom:var(--space-4);}
+.sort_sel{
+	display:inline-flex; align-items:center; gap:6px;
+	background:var(--bg-000); border:1px solid var(--ink-300);
+	border-radius:var(--radius-ctrl); padding:7px var(--space-3); order:1;
+}
+.sort_tit{color:var(--ink-500)!important; font-size:13px;}
+.show_bl{color:var(--accent-500)!important;}
+.sort_text{color:var(--accent-500)!important; font-weight:600;}
+.cm_countProdBl{
+	background:var(--bg-000)!important; border:1px solid var(--ink-300)!important;
+	border-radius:var(--radius-ctrl)!important; color:var(--ink-700)!important; font-weight:500;
+}
+.cm_countProdBl .cm_cPr{color:var(--ink-900); font-weight:600;}
+/* Переключатель вида — сегментированный контрол */
+.butt_sel{background:var(--bg-100); border:1px solid var(--ink-300); border-radius:var(--radius-ctrl); padding:3px; gap:2px; height:auto;}
+.butt_sel .cm_viewAct{
+	border:none!important; background:transparent!important;
+	border-radius:var(--radius-badge); fill:var(--ink-500); color:var(--ink-500);
+	height:30px; flex:0 0 34px; width:34px; min-width:34px;
+}
+.butt_sel .cm_viewAct:hover{background:var(--bg-000)!important; box-shadow:none!important; transform:none; fill:var(--ink-700); color:var(--ink-700);}
+.butt_sel .CmViewActive{background:var(--bg-000)!important; fill:var(--accent-500)!important; color:var(--accent-500)!important; box-shadow:var(--shadow-card);}
+.sort_list:hover{background:var(--accent-100)!important; color:var(--accent-600)!important;}
+
+/* --- Левый сайдбар --- */
+.left_fil{width:24%!important; border:none!important; gap:var(--space-4);}
+/* Карточка дерева разделов */
+.cm_FsBlock{
+	background:var(--bg-000); border:1px solid var(--ink-300);
+	border-radius:var(--radius-card); box-shadow:var(--shadow-card);
+	padding:var(--space-4); margin-bottom:var(--space-4);
+}
+.CmParentSectName{color:var(--ink-900)!important; font-weight:600; font-size:14px;}
+.CmSecondLevelLink{color:var(--ink-700)!important; font-weight:500;}
+.CmSecondLevelLink:hover{color:var(--accent-500)!important; text-decoration:none!important;}
+.CmSecondLevelLink.CmActiveItem{color:var(--accent-500)!important; text-decoration:underline!important; text-underline-offset:4px; text-decoration-thickness:2px;}
+.CmThirdLevelLink{color:var(--ink-700)!important;}
+.CmThirdLevelLink:hover{color:var(--accent-500)!important; text-decoration:none!important;}
+.CmThirdLevelLink.CmActiveItem{color:var(--accent-500)!important; font-weight:600;}
+.CmPlusMinusBlock svg{fill:var(--ink-500)!important;}
+
+/* Поиск раздела */
+.CmInputSect{
+	width:100%!important; box-sizing:border-box; height:38px!important; line-height:38px!important;
+	text-transform:none!important; font-weight:400!important; font-size:13px!important;
+	border:1px solid var(--ink-300)!important; border-radius:var(--radius-ctrl)!important;
+	box-shadow:none!important; color:var(--ink-700)!important; background:var(--bg-000)!important;
+	padding:0 var(--space-3)!important;
+}
+.CmInputSect:focus{border-color:var(--accent-500)!important; box-shadow:0 0 0 3px var(--accent-100)!important;}
+
+/* Блок фильтров (производитель и т.д.) → карточка */
+.CmWrapLpartBlock{
+	background:var(--bg-000); border:1px solid var(--ink-300);
+	border-radius:var(--radius-card); box-shadow:var(--shadow-card); padding:var(--space-4);
+}
+/* Заголовки секций фильтра */
+.l_title{
+	display:block!important; margin:0 0 var(--space-3)!important; top:0!important;
+	background:transparent!important; box-shadow:none!important; text-align:left!important;
+	color:var(--ink-500)!important; font-size:12px!important; font-weight:600;
+	text-transform:uppercase; letter-spacing:.03em;
+}
+hr.titleSet{display:none!important;}
+.l_part{margin-bottom:var(--space-6)!important;}
+
+/* Поиск по производителям */
+.searc_inp{width:100%!important; padding-left:0!important; margin-bottom:var(--space-3)!important;}
+input.filt_sect{
+	width:100%!important; box-sizing:border-box; text-transform:none!important; font-weight:400!important;
+	border:1px solid var(--ink-300)!important; border-radius:var(--radius-ctrl)!important;
+	box-shadow:none!important; color:var(--ink-700)!important; padding:7px var(--space-3)!important; line-height:20px;
+}
+input.filt_sect:focus{border-color:var(--accent-500)!important; box-shadow:0 0 0 3px var(--accent-100)!important; outline:none;}
+
+/* Кастомные чекбоксы фильтров (§7.7) */
+div.CmFilterCheck{padding:var(--space-2) var(--space-2) var(--space-2) 0!important; border-radius:var(--radius-badge);}
+.CmFilterCheck:hover{background-color:var(--bg-100)!important;}
+.check_b{
+	border:1px solid var(--ink-300)!important; border-radius:4px!important;
+	width:16px!important; height:16px!important; flex:0 0 16px!important; top:1px!important;
+}
+.CmFilterCheckActive .check_b, .CmFilterCheck:hover .check_b{border-color:var(--accent-500)!important;}
+.CmFilterCheckActive .check_b{background:var(--accent-500)!important;}
+.check_b svg{width:16px!important; height:16px!important; margin:-1px 0 0 -1px!important; fill:#fff!important;}
+.check_b svg path{fill:#fff!important;}
+.CmFilCheckTxt, .CmBranName{color:var(--ink-700)!important; font-size:13px;}
+.CmFilterCheckActive .CmFilCheckTxt, .CmFilterCheckActive .CmBranName{color:var(--ink-900)!important;}
+/* Счётчик в скобках вместо верхнего индекса (§7.7) */
+.CmFilterCheck sup, .CmBranName sup{
+	vertical-align:baseline!important; font-size:12px!important; color:var(--ink-500)!important; margin-left:4px;
+}
+.CmFilterCheck sup::before, .CmBranName sup::before{content:"(";}
+.CmFilterCheck sup::after, .CmBranName sup::after{content:")";}
+
+/* OEM / Analog тумблеры */
+.CmTumButn{border:1px solid var(--ink-300)!important; border-radius:var(--radius-ctrl)!important; color:var(--ink-700)!important;}
+.CmTumButn.CmTumPushed, .CmTumButn:hover{border-color:var(--accent-500)!important; color:var(--accent-600)!important; background:var(--accent-100)!important;}
+
+/* --- Карточка товара (LIST) --- */
+.cm_listView .main_bl{display:flex; flex-direction:column; gap:var(--space-4);}
+.row_bl{
+	min-height:0!important;
+	padding:var(--space-6)!important;
+	background:var(--bg-000);
+	border:1px solid var(--ink-300)!important;
+	border-radius:var(--radius-card);
+	box-shadow:var(--shadow-card);
+	transition:box-shadow .2s ease, border-color .2s ease;
+}
+.row_bl:hover{background:var(--bg-000)!important; border-color:var(--accent-100)!important; box-shadow:var(--shadow-card-hover);}
+/* Бренд + артикул */
+.tit_art{background:transparent!important; padding-left:0!important; font-family:var(--font-ui)!important;}
+.CmArtBraLink{color:var(--accent-500)!important; font-weight:500;}
+.CmArtBraLink b{color:var(--ink-900)!important; font-weight:600; font-family:var(--font-ui);}
+/* Название */
+.CmListName{color:var(--ink-700)!important; font-family:var(--font-ui)!important; font-weight:400;}
+.CmAdditName{color:var(--ink-500)!important;}
+/* Характеристики: label серый / значение тёмное */
+.props_l li, .CmPropDesc{color:var(--ink-500)!important;}
+.CmPropVal, .CmPropVal b{color:var(--ink-700)!important;}
+.CmListTrdNums{color:var(--ink-500)!important;}
+.CmListTrdNums b{color:var(--ink-700)!important;}
+/* Заглушка "фото" */
+.CmNoFotoImg{border-radius:var(--radius-ctrl);}
+
+/* --- Карточка товара (GRID) --- */
+.partCard{
+	border:1px solid var(--ink-300)!important; border-radius:var(--radius-card)!important;
+	box-shadow:var(--shadow-card); background:var(--bg-000); transition:box-shadow .2s ease, border-color .2s ease;
+}
+.partCard:hover{border-color:var(--accent-100)!important; box-shadow:var(--shadow-card-hover);}
+
+/* --- Пагинация --- */
+.CmPagLink{
+	border:1px solid var(--ink-300)!important; border-radius:var(--radius-ctrl)!important;
+	color:var(--ink-700)!important; background:var(--bg-000); min-width:34px; text-align:center;
+}
+.CmPagLink:hover{border-color:var(--accent-500)!important; color:var(--accent-600)!important;}
+.CmPagLink.CmPageAct{background:var(--accent-500)!important; border-color:var(--accent-500)!important; color:#fff!important;}
+
+/* --- Кнопка "Фильтры" (моб.) --- */
+.CmFilterShowButton{
+	border:1px solid var(--ink-300)!important; border-radius:var(--radius-ctrl)!important;
+	color:var(--ink-700)!important; background:var(--bg-000)!important;
+}
+.CmFilterShowButton .CmSvgFilterImg{fill:var(--accent-500)!important;}

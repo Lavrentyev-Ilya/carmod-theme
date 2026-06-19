@@ -18,6 +18,7 @@ if(!function_exists('PrintPrices_x')){
 	require_once dirname(__DIR__).'/prices_block/template.php';
 }
 ?>
+<link rel="stylesheet" type="text/css" href="<?=CmAssetUrl_x(TEMPLATE_PAGE_DIR.'style.css')?>" />
 <div class="Popup_n">
     <div class="PopupContent_n">
         <span class="Close_n">&times;</span>
