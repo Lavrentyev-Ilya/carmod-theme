@@ -32,7 +32,7 @@
 }
 
 
-.CmSctTit{text-align:center; margin:25px auto 40px auto; color:var(--cm-title); font-family:var(--cm-title-family, sans-serif); border-bottom:1px solid var(--cm-line); text-transform:uppercase; font-weight:500; padding:10px; margin-top:10px!important; line-height:normal!important; max-width:50%;}
+.CmSctTit{text-align:center; margin:25px auto 40px auto; color:var(--cm-title); font-family:var(--cm-title-family, sans-serif); border-bottom:1px solid var(--cm-line); text-transform:uppercase; font-weight:500; padding:100px; margin-top:10px!important; line-height:normal!important; max-width:50%;}
 .CmSctTit b{color:var(--cm-main);}
 .CmSctFx{
 	overflow: visible;
