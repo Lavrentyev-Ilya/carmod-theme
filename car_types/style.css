@@ -6,3 +6,156 @@ h1.CmH1Types{align-self:center; font-family:Calibri!important; text-overflow:ell
 .cmHeadBox{display:flex; flex-direction:column; padding:0px 21px 0px 21px; margin:0px -21px;}
 .CmTypeColor{color:var(--cm-main);}
 .CmTypeBg{background-color:var(--cm-main);}
+
+
+/* ============================================================= */
+/* ===============  REDESIGN 2026 (DESIGN.md)  ================= */
+/* Страница выбора типа двигателя. Визуальный слой, токены.       */
+/* ============================================================= */
+
+/* --- Поверхность страницы --- */
+#CmContent:has(.CmTypesWrap){
+	background:var(--bg-100)!important;
+	box-shadow:none!important;
+	border:none!important;
+	padding:var(--space-6) var(--space-8) var(--space-8)!important;
+	font-family:var(--font-ui)!important;
+	font-feature-settings:'tnum' 1;
+	color:var(--ink-700);
+}
+
+/* --- Шапка: фильтр по объёму → белая карточка --- */
+.cmHeadBox{
+	margin:0!important;
+	padding:var(--space-6)!important;
+	background:var(--bg-000);
+	border:1px solid var(--ink-300);
+	border-radius:var(--radius-card);
+	box-shadow:var(--shadow-card);
+}
+.CmTitleBox{flex-direction:row; align-items:center; gap:var(--space-4); margin-bottom:0;}
+.cmProdLogo{
+	width:56px!important;
+	height:56px!important;
+	margin-right:0!important;
+	border:1px solid var(--ink-300);
+	border-radius:50%;
+	background-size:62%!important;
+	background-color:var(--bg-000);
+}
+.fByLiterTitle{color:var(--ink-500); font-size:12px;}
+
+/* Кнопки фильтра по объёму */
+.filt_button{flex-wrap:wrap; gap:var(--space-1);}
+.lit_but{
+	margin:0!important;
+	box-shadow:none!important;
+	border:1px solid var(--ink-300)!important;
+	border-radius:var(--radius-badge);
+	color:var(--ink-700)!important;
+	padding:var(--space-1) var(--space-2);
+	transition:background .15s ease, color .15s ease, border-color .15s ease;
+}
+.lit_but:hover{background:var(--bg-100)!important; color:var(--ink-900)!important;}
+/* Активная «All» (col_fff + CmTypeBg) → светлый акцент вместо заливки */
+.lit_but.CmTypeBg{
+	background-color:var(--accent-100)!important;
+	border-color:var(--accent-500)!important;
+}
+.lit_but.col_fff{color:var(--accent-600)!important;}
+
+/* --- Заголовок-плашка --- */
+.CmBrTitleSearchWrap{
+	margin:0 0 var(--space-2)!important;
+	padding:var(--space-4)!important;
+	background:var(--bg-000)!important;
+	border:1px solid var(--ink-300)!important;
+	border-left:3px solid var(--accent-500)!important;
+	border-radius:var(--radius-card)!important;
+	box-shadow:var(--shadow-card)!important;
+}
+.CmBrTitleSearchWrap h1,
+#CmTitlH1Page h1{
+	font-family:var(--font-ui)!important;
+	font-weight:400!important;
+	font-size:18px!important;
+	line-height:26px!important;
+	color:var(--ink-500)!important;
+	text-shadow:none!important;
+}
+.CmBrTitleSearchWrap h1 b{color:var(--ink-900)!important; font-weight:600;}
+.CmBreadCrumbs{background-color:transparent!important; color:var(--ink-500)!important;}
+
+/* --- Контейнер таблицы --- */
+.CmTypesWrap{background:transparent!important; margin:0!important; padding:0!important;}
+.CmTypeTable_mod{
+	font-family:var(--font-ui)!important;
+	font-size:14px;
+	color:var(--ink-700)!important;
+	background:var(--bg-000);
+	border:1px solid var(--ink-300);
+	border-radius:var(--radius-card);
+	box-shadow:var(--shadow-card);
+	overflow:hidden;
+	margin-top:var(--space-4);
+}
+
+/* Шапка таблицы */
+.CmTypeTitleWrap{background:var(--bg-100)!important; padding:var(--space-3) var(--space-2)!important;}
+.CmTypeTitleWrap div{background:transparent!important;}
+.CmTypeTitleHead .CmTypeColor,
+.CmTypeTitleHead .CmHpLitCylWr span{color:var(--ink-500)!important; font-weight:600;}
+
+/* Строки */
+div.CmTypeListWrap{border-bottom:1px solid var(--ink-300);}
+div.CmTypeListWrap:last-child{border-bottom:none;}
+.CmModelLink{color:var(--ink-700)!important;}
+.CmModelLink:hover{background-color:var(--bg-100)!important;}
+.CmModelLink:hover .CmModelName span{color:var(--accent-600)!important;}
+/* Объём двигателя и название модели — тёмные, плотные */
+.CmModelNameLiter{color:var(--ink-900)!important; font-weight:600;}
+.CmModelName .CmTypeColor b{color:var(--ink-900)!important; font-weight:600;}
+.CmProto{color:var(--ink-500)!important;}
+.CmYearFull{color:var(--ink-700)!important;}
+/* Мощность — тёмные цифры */
+.CmKwBl b, .CmHpBl b{color:var(--ink-900)!important;}
+.CmHpLitCylWrap{color:var(--ink-500)!important;}
+.CmDriveBl, .CmDriveBlTit{color:var(--ink-700)!important;}
+/* Иконка «инфо» */
+.CmInfoSvgIm{fill:var(--ink-500); transition:fill .15s ease;}
+.CmInfoBl:hover .CmInfoSvgIm{fill:var(--accent-500);}
+
+/* Дропдауны-фильтры в шапке таблицы */
+.custom-select{
+	border:1px solid var(--ink-300)!important;
+	border-radius:var(--radius-ctrl)!important;
+	background:var(--bg-000)!important;
+}
+.CmOptContainer{
+	border:1px solid var(--ink-300)!important;
+	border-radius:0 0 var(--radius-ctrl) var(--radius-ctrl)!important;
+	box-shadow:var(--shadow-popup)!important;
+}
+.CmSelOpt:hover{background-color:var(--accent-100)!important; color:var(--accent-600)!important;}
+.CmSelOpt.selected{background-color:var(--accent-100)!important; color:var(--accent-600)!important;}
+
+/* Поле поиска по типу двигателя */
+.ImpTypeSt{
+	border:1px solid var(--ink-300)!important;
+	border-radius:var(--radius-ctrl)!important;
+	transition:border-color .15s ease, box-shadow .15s ease;
+}
+.ImpTypeSt:focus-visible{outline:none!important; border-color:var(--accent-500)!important; box-shadow:0 0 0 3px var(--accent-100)!important;}
+
+/* Поповер доп.информации → нейтральный, без жёлтого */
+.CmDopInfBlWrap{
+	background-color:var(--bg-000)!important;
+	border:1px solid var(--ink-300)!important;
+	border-radius:var(--radius-ctrl)!important;
+	box-shadow:var(--shadow-popup)!important;
+	color:var(--ink-700)!important;
+	font-family:var(--font-ui)!important;
+}
+.CmDopTitle.CmTypeColor{color:var(--ink-500)!important;}
+.CmDopVal{color:var(--ink-900)!important;}
+.CmClButImage{fill:var(--ink-500);}
