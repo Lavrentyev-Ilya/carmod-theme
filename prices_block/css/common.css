@@ -101,3 +101,78 @@
     .CmProductPriceBox .CmProductPriceMailOrder.CmProductPriceCartButton .cartText,
     .CmProductPriceList .CmProductPriceMailOrder.CmProductPriceCartButton .cartText{display:inline-flex!important; max-width:none!important; opacity:1!important;}
 }
+
+
+/* ============================================================= */
+/* ===============  REDESIGN 2026 (DESIGN.md)  ================= */
+/* Блок цены/наличия/корзины. Плоский CTA, токены. §7.2 / §7.3   */
+/* ============================================================= */
+
+/* CTA «В корзину» — плоский акцентный (§7.2) */
+.CmProductPriceCartButton,
+.CmProductPriceOrderButton.CmProductPriceCartButton,
+.CmProductPriceMailOrder.CmProductPriceCartButton{
+	background:var(--accent-500)!important;
+	border:1px solid var(--accent-500)!important;
+	border-radius:var(--radius-ctrl)!important;
+	box-shadow:none!important;
+	color:#fff!important;
+	filter:none!important;
+	text-shadow:none!important;
+}
+.CmProductPriceCartButton:hover,
+.CmProductPriceOrderButton.CmProductPriceCartButton:hover,
+.CmProductPriceMailOrder.CmProductPriceCartButton:hover{
+	background:var(--accent-600)!important;
+	border-color:var(--accent-600)!important;
+	filter:none!important;
+	box-shadow:none!important;
+}
+.CmProductPriceCartButton > span,
+.CmProductPriceCartText,
+.cartText{color:#fff!important; text-shadow:none!important;}
+.CmProductPriceCartButton .cm_cartImg,
+.CmProductPriceCartButton .cm_cartImg_t,
+.CmProductPriceCartButton svg{fill:#fff!important;}
+/* Disabled остаётся приглушённым серым */
+.CmProductPriceCartButton.CmProductPriceCartButton-disabled,
+.CmProductPriceCartButton.CmProductPriceCartButton-disabled:hover{
+	background:var(--ink-300)!important; border-color:var(--ink-300)!important; color:#fff!important;
+}
+
+/* Степпер количества — чистый, на токенах */
+.blockQty, .CmQuantPriceBlock{
+	border:1px solid var(--ink-300)!important;
+	border-radius:var(--radius-ctrl)!important;
+	background:var(--bg-000)!important;
+	box-shadow:none!important;
+	overflow:hidden;
+}
+.minusButt, .plusButt, .CmQuantMinusBut, .CmQuantPlusBut, .cm_countButM, .cm_countButP{
+	background:transparent!important; color:var(--ink-500)!important; border:none!important; box-shadow:none!important;
+}
+.minusButt:hover, .plusButt:hover, .CmQuantMinusBut:hover, .CmQuantPlusBut:hover{color:var(--accent-500)!important; background:var(--bg-100)!important;}
+.quantProd, .CmQuantInputProd, .CmAddToCartQty{color:var(--ink-900)!important; background:transparent!important; border:none!important; box-shadow:none!important; font-weight:600;}
+
+/* Цена — зелёная (§4) */
+.CmPriceNum, .CmPriceCurrency, .CmPriceFormText{color:var(--success-600)!important; text-shadow:none!important;}
+.CmPriceNum.CmProductPriceNum-muted, .CmProductPriceNum-muted{color:var(--ink-500)!important;}
+
+/* Наличие / доставка — смысловые цвета (§7.3) */
+.cm_svgAval .fillBg, .CmAvalOnPage, .CmProductPriceAvailabilityIcon svg, .CmProductPriceDeliveryCheck{fill:var(--success-600)!important;}
+.CmProductPriceAvailabilityValue, .CmListPrAvail{color:var(--success-600)!important;}
+.CmProductPriceDeliveryBadge-instock{background:var(--success-100)!important; color:var(--success-600)!important; border-color:var(--success-100)!important;}
+
+/* «Лучший поставщик» / магазин-поставщик — вторичная кнопка-контур (§7.2) */
+.CmProductPriceSupplierStock, .CmSuplNameStockWrapBl{
+	border:1px solid var(--ink-300)!important;
+	border-radius:var(--radius-ctrl)!important;
+	background:var(--bg-000)!important;
+	color:var(--ink-700)!important;
+	box-shadow:none!important;
+}
+.CmProductPriceSupplierStockText{color:var(--ink-700)!important;}
+
+/* «Показать ещё цены» — акцентная ссылка */
+.CmMorePrices{color:var(--accent-500)!important;}
+.CmMorePrices:hover{color:var(--accent-600)!important;}

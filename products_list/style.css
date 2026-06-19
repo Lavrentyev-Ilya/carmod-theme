@@ -1271,3 +1271,14 @@ div.CmFilterCheck{padding:var(--space-2) var(--space-2) var(--space-2) 0!importa
 	color:var(--ink-700)!important; background:var(--bg-000)!important;
 }
 .CmFilterShowButton .CmSvgFilterImg{fill:var(--accent-500)!important;}
+
+/* --- Отступ между сайдбаром и основным блоком --- */
+.CmFiltersMainP{
+	background:transparent!important;
+	margin:0!important;
+	padding:var(--space-6) 0 0!important;
+	gap:var(--space-6);
+	align-items:flex-start;
+}
+.left_fil{flex:0 0 24%;}
+.main_part{width:auto!important; flex:1 1 auto; min-width:0; float:none!important; margin:0!important;}
