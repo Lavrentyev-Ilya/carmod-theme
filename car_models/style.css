@@ -165,6 +165,7 @@ div.CmColor-fff{color:#ffffff !important;}
 /* --- Верхний фильтр-блок → белая карточка --- */
 .CmHeadBox{margin:0!important; padding:0!important;}
 .CmFilterSwitchWrap{
+	position:relative;
 	background:var(--bg-000);
 	border:1px solid var(--ink-300);
 	border-radius:var(--radius-card);
@@ -172,6 +173,9 @@ div.CmColor-fff{color:#ffffff !important;}
 	padding:var(--space-6);
 	margin-bottom:var(--space-6);
 }
+
+/* Кнопка «Год» прижата к краю — привязываем к карточке и даём отступ */
+.yearBox{top:var(--space-6)!important; right:var(--space-6)!important;}
 .CmTitleBox{margin-bottom:0;}
 .CmLetYearFilterBl{padding-bottom:0;}
 
@@ -257,8 +261,8 @@ li.CmNFiltItem:hover, li.CmNFiltItem2:hover{color:var(--accent-500)!important;}
 }
 .CmBrTitleSearchWrap h1 b{color:var(--ink-900)!important; font-weight:600;}
 
-/* Хлебные крошки под плашкой */
-.CmBreadCrumbs{background-color:transparent!important; color:var(--ink-500)!important;}
+/* Хлебные крошки под плашкой дублируют заголовок — прячем (остаются в DOM для SEO) */
+.CmBreadCrumbs{display:none!important;}
 
 /* --- Сетка карточек моделей --- */
 .CmTitleModelBlock{background:transparent!important; margin:0!important; padding:var(--space-4) 0 0!important;}
