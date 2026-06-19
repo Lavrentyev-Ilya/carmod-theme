@@ -229,7 +229,7 @@ $aListSVG = [
 							</div>
 						<?}?>
 						<?foreach($aSvgBody as $Link => $aV){?>
-							<a href="<?=$Link?>/" class="CmCategSvgImg CmFillSvg CmStrokeSvg CmTitShow CmColorFih CmColorSth" title="<?=Lng_x($aV['Code'])?>"><?=$aV['Svg']?><span class="CmCategLabel"><?=Lng_x($aV['Code'])?></span></a>
+							<a href="<?=$Link?>/" class="CmCategSvgImg CmFillSvg CmStrokeSvg CmTitShow CmColorFih CmColorSth" title="<?=Lng_x($aV['Code'])?>"><span class="CmCategIcon"><?=$aV['Svg']?></span><span class="CmCategLabel"><?=Lng_x($aV['Code'])?></span></a>
 								
 								<?/* if($v['Nod'] == 172 && ($aSPEC['LOW_BEAM_SPEC'] OR $aSPEC['HIGH_BEAM_SPEC'] OR $aSPEC['ANTIFOG_HEADLIGHT_SPEC'] OR $aSPEC['PARKING_LIGHT_SPEC'] OR $aSPEC['PARKING_LIGHT_SPEC'])){?>
 									<div class="CmLightSpecsBlock">
@@ -338,8 +338,7 @@ $aListSVG = [
 								</a>
 							<?}else{?>
 								<a href="<?=$Link?>/" class="CmCategSvgImg CmColorFih CmColorSth CmFillSvg CmStrokeSvg CmTitShow" title="<?=Lng_x($aV['Code'])?>">
-									<?if($aV['Code']=='Engine_oil'){?><div class="CmOilDropImg"><?=$aSVG['Oil_Drop']?></div><?}?>
-									<?=$aV['Svg']?>
+									<span class="CmCategIcon"><?if($aV['Code']=='Engine_oil'){?><div class="CmOilDropImg"><?=$aSVG['Oil_Drop']?></div><?}?><?=$aV['Svg']?></span>
 									<span class="CmCategLabel"><?=Lng_x($aV['Code'])?></span>
 								</a>
 							<?}?>

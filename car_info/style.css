@@ -261,6 +261,18 @@ span.CmBrandModName{color:#202020; font-size:20px; line-height:30px;}
 /* Страница информации об автомобиле. Визуальный слой, токены.    */
 /* ============================================================= */
 
+/* --- Логотип бренда в шапке: ровный паддинг + скругление --- */
+.CmTopBox .CmTitleBox{
+	background:var(--bg-000)!important;
+	border:1px solid var(--ink-300)!important;
+	border-radius:var(--radius-card)!important;
+	box-shadow:var(--shadow-card)!important;
+	padding:var(--space-3)!important;
+	align-items:center;
+	justify-content:center;
+}
+.CmTopBox .CmHeadSecPicture{margin:0!important; background-position:center!important;}
+
 /* --- Поверхность страницы --- */
 #CmContent:has(.CmSectionCategWrapBlock){
 	background:var(--bg-100)!important;
@@ -385,11 +397,13 @@ span.CmBrandModName{color:#202020; font-size:20px; line-height:30px;}
 	border-radius:var(--radius-card)!important;
 	box-shadow:var(--shadow-card)!important;
 	overflow:hidden;
-	/* высоты строк по контенту, чтобы влезли подписи плиток */
-	grid-template-rows:auto auto!important;
+	/* шапка карточки фиксированной высоты (обе равны), плитки — по контенту */
+	grid-template-rows:100px auto!important;
 }
 .CmInnerBlock_1_1, .CmInnerBlockGen, .CmInnerBlock_1_2{background-color:var(--bg-000)!important;}
 .CmInnerBlock_2_1{background-color:var(--bg-100)!important; border-bottom:1px solid var(--ink-300)!important;}
+/* Шапки обеих карточек — одинаковая высота, контент не выпирает */
+.CmInnerBlock_1_1, .CmInnerBlock_2_1{min-height:100px; overflow:hidden;}
 
 /* Заголовки карточек: имя/тип/год */
 .CmModelNameTxt{color:var(--ink-900)!important; font-weight:600;}
@@ -406,7 +420,8 @@ span.CmBrandModName{color:#202020; font-size:20px; line-height:30px;}
 .CmEInfTxt2 b{color:var(--ink-900)!important;}
 .CmFuelTypeTxt{color:var(--accent-500)!important;}
 .CmEngTypeTxt2{color:var(--ink-500)!important;}
-/* Иконку двигателя (контур) НЕ перекрашиваем — остаётся как было */
+/* Контур двигателя — нейтральный серый вместо бледно-розового (--cm-light) */
+.CmEngineImg svg{fill:#8c9097!important;}
 .CmEngOilTitle, .CmTOilTitle{color:var(--ink-900)!important;}
 .CmEngOilDesc{color:var(--ink-500)!important;}
 
@@ -415,10 +430,12 @@ span.CmBrandModName{color:#202020; font-size:20px; line-height:30px;}
 	padding:var(--space-3)!important;
 	gap:var(--space-2);
 	align-content:start;
+	grid-auto-rows:1fr;   /* строки плиток одинаковой высоты */
 }
 .CmCategSvgImg{
 	flex-direction:column!important;
 	justify-content:flex-start!important;
+	align-items:center!important;
 	gap:var(--space-2);
 	padding:var(--space-3) var(--space-2)!important;
 	border:1px solid var(--ink-300);
@@ -428,13 +445,32 @@ span.CmBrandModName{color:#202020; font-size:20px; line-height:30px;}
 	flex-basis:auto!important;
 	transition:background .15s ease, border-color .15s ease, fill .15s ease, stroke .15s ease;
 }
-.CmCategSvgImg svg{width:40px!important; height:40px!important;}
+/* Иконка фиксированного размера: подписи любой длины не сдвигают её */
+.CmCategIcon{
+	position:relative;
+	flex:0 0 auto;
+	width:44px;
+	height:44px;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+}
+.CmCategIcon svg{width:40px!important; height:40px!important;}
+/* Капля масла — строго по центру иконки */
+.CmCategIcon .CmOilDropImg{
+	position:absolute;
+	top:50%; left:50%;
+	transform:translate(-50%,-50%);
+	width:18px!important;
+	margin:0!important;
+}
 .CmCategLabel{
 	font-family:var(--font-ui);
 	font-size:12px;
 	line-height:1.25;
 	text-align:center;
 	color:var(--ink-700);
+	/* многоязычные подписи: максимум 2 строки, не ломают сетку */
 	overflow:hidden;
 	display:-webkit-box;
 	-webkit-line-clamp:2;
