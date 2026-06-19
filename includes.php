@@ -1,5 +1,8 @@
 <?VerifyAccess_x('includes');  ?>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="/<?=CM_DIR?>/templates/<?=TEMPLATE_x?>/common.css?v=<?=CM_VERSION?>" type="text/css">
 <link rel="stylesheet" href="/<?=CM_DIR?>/templates/<?=TEMPLATE_x?>/custom.css" type="text/css">
 <script src="/<?=CM_DIR?>/media/js/common.js?v=<?=CM_VERSION?>"></script>

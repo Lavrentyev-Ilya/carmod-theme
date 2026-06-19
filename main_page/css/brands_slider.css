@@ -1,8 +1,8 @@
-.CmBraSlider{overflow:hidden; width:100%; position:relative; padding:15px 0; user-select:none; border:5px solid var(--cm-light-bg-color); border-right:none; border-left:none; background:white;}
-.CmBraTrack{display:flex; gap:20px; will-change:transform; padding:3px 0;}
+.CmBraSlider{overflow:hidden; width:100%; position:relative; padding:18px 16px; user-select:none; border:1px solid var(--ink-300); border-radius:var(--radius-card); background:var(--bg-000); box-shadow:var(--shadow-card); margin:24px 0;}
+.CmBraTrack{display:flex; gap:32px; will-change:transform; padding:3px 0; align-items:center;}
 .CmBraItem{display:flex; align-items:center; justify-content:center; width:auto; flex:0 0 auto;}
-.CmBraItem img{display:block; max-width:150px; height:auto; max-height:60px; object-fit:contain; opacity:.9; transition:.3s;}
-.CmBraItem img:hover{opacity:1; transform:scale(1.05);}
+.CmBraItem img{display:block; max-width:150px; height:auto; max-height:54px; object-fit:contain; opacity:.6; filter:grayscale(1); transition:.25s ease;}
+.CmBraItem img:hover{opacity:1; filter:grayscale(0); transform:scale(1.04);}
 
 /* Адаптация под разное количество картинок */
 .CmBraSlider[data-count="3"] .CmBraItem img,

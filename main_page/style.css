@@ -307,3 +307,75 @@ div.boxSect_x li a {color:#505050; list-style-type:none !important;}
 .CmListNSectBl{border-color:var(--cm-main);}
 .favlogo_x:hover{background-color:var(--cm-light); border-color:var(--cm-main);}
 .mbut_x:hover{background-color:var(--cm-light); color:var(--cm-main);}
+
+
+/* ============================================================= */
+/* ===============  REDESIGN 2026 (DESIGN.md)  ================= */
+/* Warm professional visual layer for the main page.            */
+/* Scoped to the main page via #CmContent:has(.CmMCont).         */
+/* ============================================================= */
+
+/* --- Page surface: drop the heavy white card + parts pattern, --- */
+/* --- content sits on a calm neutral, blocks become cards.    --- */
+#CmContent:has(.CmMCont){
+	background:var(--bg-100)!important;
+	box-shadow:none!important;
+	border:none!important;
+	padding:var(--space-6) var(--space-8) var(--space-8)!important;
+	font-family:var(--font-ui)!important;
+	font-feature-settings:'tnum' 1;
+	color:var(--ink-700);
+}
+#CmContent:has(.CmMCont) h1,
+#CmContent:has(.CmMCont) h2{
+	font-family:var(--font-ui)!important;
+	text-shadow:none!important;
+}
+
+/* --- Top row: selector card + promo banner --- */
+.CmMCont{font-family:var(--font-ui);}
+.CmMseSd{gap:var(--space-6);}
+
+/* Selector card — clean white panel, no diagonal pattern bg */
+.CmMSeBox{
+	background:var(--bg-000)!important;
+	background-image:none!important;
+	border:1px solid var(--ink-300)!important;
+	border-radius:var(--radius-card)!important;
+	box-shadow:var(--shadow-card)!important;
+	padding:var(--space-6)!important;
+	line-height:1.4;
+}
+
+/* VIN / reg-number sub-boxes spacing */
+.CmBoxMP_rn, .CmBoxMP_vn{margin-top:var(--space-2);}
+
+/* "Need help?" link → accent text, no shouting */
+.CmBoxButMdl{margin-top:var(--space-4);}
+.CmSrchLink{
+	color:var(--accent-500)!important;
+	font-weight:600;
+	font-size:13px;
+	text-decoration:none;
+}
+.CmSrchLink:hover{color:var(--accent-600)!important; text-decoration:underline;}
+
+/* Promo banner frame — calm graphite fallback, soft rounded */
+.CmMSdBox, .CmSliderBack{
+	border-radius:var(--radius-card)!important;
+	box-shadow:var(--shadow-card);
+	background:#1A1D21;
+}
+.CmSliderBack{
+	background:linear-gradient(135deg,#23272e 0%,#15171b 100%)!important;
+	border:none;
+}
+.CmSlBoxSeo{
+	background:transparent;
+	color:#e6e8ec;
+	font-size:18px;
+	line-height:1.6;
+}
+
+/* Min selector (no slider) divider */
+.CmBoxMinSelect{border-bottom:1px solid var(--ink-300);}

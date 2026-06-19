@@ -3,9 +3,9 @@
 
 .CmMSdBox{max-width:735px; height:387px; flex:2.2; overflow:hidden; position:relative; border-radius:5px;}
 .CmSlider{display: flex; height: 100%; transition: transform 0.5s ease-in-out; touch-action:none;}
-.CmMSdDots { position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); display: flex; justify-content: center; align-items: center; z-index: 10; padding: 10px 0; }
-.dot { width: 10px; height: 10px; margin: 10px 10px; border: 2px solid #fff; outline: 1px solid; border-radius: 50%; cursor: pointer; transition: background 0.3s; }
-.dot.active { background-color: #000; }
+.CmMSdDots { position: absolute; bottom: 14px; left: 40px; transform: none; display: flex; justify-content: flex-start; align-items: center; z-index: 10; padding: 0; gap: 8px; }
+.dot { width: 8px; height: 8px; margin: 0; border: none; outline: none; background: rgba(255,255,255,0.35); border-radius: 50%; cursor: pointer; transition: background 0.3s, width 0.3s; }
+.dot.active { background-color: var(--accent-500); width: 22px; border-radius: 4px; }
 
 /* #bnt12{top:14%; left:6%; font-size:30px; font-weight:bold; color:#ffffff; padding:15px 20px; background: linear-gradient(47deg, #a800a8, #f9004b); transform: skew(14.6deg, -5.3deg);}
 #bnt13{top:31%; left:26%; perspective:200px; white-space:nowrap;}

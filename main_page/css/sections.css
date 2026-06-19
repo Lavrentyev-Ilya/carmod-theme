@@ -260,3 +260,110 @@
 	.CmPtsSrchCon{ flex-direction: column;}
 	.CmSctTit{max-width:100%;}
 }
+
+
+/* ============================================================= */
+/* ===============  REDESIGN 2026 (DESIGN.md)  ================= */
+/* ============================================================= */
+
+.CmSctWrap{font-family:var(--font-ui); padding-top:var(--space-8);}
+
+/* Header row: title left, search right */
+.CmPtsSrchCon{
+	justify-content:space-between!important;
+	align-items:center;
+	padding-bottom:var(--space-6);
+	gap:var(--space-4);
+}
+.CmPtsConIn{position:static!important; margin-top:0!important;}
+
+/* Section heading → dark plaque-style title with accent bar */
+.CmSctTit{
+	max-width:none!important;
+	margin:0!important;
+	padding:0 0 0 var(--space-4)!important;
+	text-align:left!important;
+	text-transform:none!important;
+	border-bottom:none!important;
+	border-left:3px solid var(--accent-500);
+	color:var(--ink-500)!important;
+	font-family:var(--font-ui)!important;
+	font-weight:400;
+	font-size:18px!important;
+	line-height:26px!important;
+}
+.CmSctTit b{color:var(--ink-900)!important; font-weight:600;}
+
+/* Search input (find category) */
+.CmPtsSrcInp{
+	border:1px solid var(--ink-300)!important;
+	border-radius:var(--radius-ctrl)!important;
+	color:var(--ink-700)!important;
+	background:var(--bg-000)!important;
+	transition:border-color .15s ease, box-shadow .15s ease!important;
+}
+.CmPtsSrcInp:hover{box-shadow:none!important;}
+.CmPtsSrcInp:focus,
+.CmPtsSrcInp:valid{
+	border-color:var(--accent-500)!important;
+	box-shadow:0 0 0 3px var(--accent-100)!important;
+	background:var(--bg-000)!important;
+}
+.CmPtsInpLbl{color:var(--ink-500)!important;}
+.CmPtsConIn svg.CmPtsInpSvg,
+.CmPtsConIn svg.CmSrchSvg{fill:var(--ink-500); border-left:none;}
+
+/* Section cards */
+.CmSctGrid{gap:var(--space-4);}
+.CmSctFx{
+	background:var(--bg-000)!important;
+	border:1px solid var(--ink-300)!important;
+	border-radius:var(--radius-card)!important;
+	box-shadow:var(--shadow-card)!important;
+	padding:var(--space-4) 0!important;
+	color:var(--ink-700)!important;
+	transition:box-shadow .2s ease, border-color .2s ease!important;
+}
+.CmSctFx:hover,
+.CmSctFx.CmSctTouchOpen{
+	background:var(--bg-000)!important;
+	border-color:var(--accent-100)!important;
+	box-shadow:var(--shadow-card-hover)!important;
+}
+.CmSctName{color:var(--ink-900)!important; font-weight:600;}
+.CmSctLn{border-top:none; background-color:var(--ink-300); width:70%;}
+
+/* Hover sub-list popup */
+.CmSctSubs{
+	background:rgba(255,255,255,0.98)!important;
+	border-radius:var(--radius-card)!important;
+	box-shadow:var(--shadow-popup)!important;
+	border-top:none!important;
+}
+.CmSctSa{color:var(--ink-700)!important; border-radius:var(--radius-badge);}
+.CmSctSa:hover{background:var(--accent-100)!important; color:var(--accent-600)!important;}
+.CmSctMa{
+	background:var(--accent-500)!important;
+	color:#fff!important;
+	border-radius:var(--radius-badge);
+	margin:0 var(--space-2) var(--space-2);
+}
+.CmSctSubs a:hover{background:var(--accent-100)!important; color:var(--accent-600)!important;}
+
+/* "Show all sections" — secondary button */
+.CmSecBtn{
+	border:1px solid var(--ink-300)!important;
+	border-radius:var(--radius-ctrl);
+	color:var(--ink-700)!important;
+	background:var(--bg-000);
+	font-weight:600;
+	padding:10px var(--space-6);
+	margin:var(--space-6) auto var(--space-2);
+	transition:border-color .15s ease, color .15s ease, background .15s ease;
+}
+.CmSecBtn:hover{
+	border-color:var(--accent-500)!important;
+	color:var(--accent-600)!important;
+	background:var(--accent-100);
+}
+.CmSecBtn svg{stroke:currentColor;}

@@ -292,3 +292,76 @@
         font-size: 18px;
     }
 }
+
+
+/* ============================================================= */
+/* ===============  REDESIGN 2026 (DESIGN.md)  ================= */
+/* ============================================================= */
+
+.CmLogoWr{font-family:var(--font-ui);}
+.CmLoHeadCont{padding-top:var(--space-8);}
+
+/* Heading "Бренд — Легковые" → dark, accent bar, no underline */
+.CmLoTtl{
+	padding:0 0 0 var(--space-4)!important;
+	border-bottom:none!important;
+	border-left:3px solid var(--accent-500);
+	text-transform:none!important;
+	font-family:var(--font-ui)!important;
+	font-size:18px!important;
+	font-weight:600;
+	color:var(--ink-900)!important;
+	line-height:26px;
+}
+.CmLoTtl .CmHeadManuf{color:var(--ink-500); font-weight:400;}
+
+/* Vehicle-type tabs → underline active, muted inactive (§7.5) */
+.CmLoBtn{border-bottom:2px solid transparent!important; margin:0 var(--space-1)!important;}
+.CmLoBtn.active{background:transparent!important; border-bottom:2px solid var(--accent-500)!important;}
+.CmLoBtn.active svg{fill:var(--accent-500)!important;}
+.CmLoBtn:not(.active) svg{fill:var(--ink-500)!important;}
+.CmLoBtn:not(.active){color:var(--ink-500)!important;}
+.CmLoBtn:not(.active):hover{border-bottom:2px solid var(--ink-300)!important; color:var(--ink-700)!important;}
+.CmLoBtn:not(.active):hover svg{fill:var(--ink-700)!important; stroke:var(--ink-700)!important;}
+
+/* Brand search input */
+.CmLoSrcInp{
+	border:1px solid var(--ink-300)!important;
+	border-radius:var(--radius-ctrl)!important;
+	color:var(--ink-700)!important;
+	background:var(--bg-000)!important;
+}
+.CmLoSrcInp:hover{box-shadow:none!important;}
+.CmLoSrcInp:focus,
+.CmLoSrcInp:valid{
+	border-color:var(--accent-500)!important;
+	box-shadow:0 0 0 3px var(--accent-100)!important;
+	background:var(--bg-000)!important;
+}
+.CmLoInpLbl{color:var(--ink-500)!important;}
+.CmLoConIn svg.CmSrchSvg{fill:var(--ink-500); border-left:none;}
+
+/* Favourite brand logos */
+.CmLogoCont{border-bottom:1px solid var(--ink-300);}
+.CmLogoCont .CmBrLo{border-radius:var(--radius-ctrl);}
+.CmLogoCont .CmBrLo:hover{
+	border:1px solid var(--accent-500)!important;
+	background-color:var(--accent-100)!important;
+}
+
+/* Brand tiles */
+.CmSecBrand{
+	background:var(--bg-000)!important;
+	border:1px solid var(--ink-300)!important;
+	border-radius:var(--radius-ctrl)!important;
+	color:var(--ink-900)!important;
+	font-family:var(--font-ui)!important;
+	font-weight:600;
+	font-size:14px!important;
+	transition:border-color .15s ease, color .15s ease, background .15s ease!important;
+}
+.CmSecBrand:hover{
+	background:var(--accent-100)!important;
+	border-color:var(--accent-500)!important;
+	color:var(--accent-600)!important;
+}
