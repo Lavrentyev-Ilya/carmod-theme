@@ -162,3 +162,14 @@ div.CmTypeListWrap:last-child{border-bottom:none;}
 .CmDopTitle.CmTypeColor{color:var(--ink-500)!important;}
 .CmDopVal{color:var(--ink-900)!important;}
 .CmClButImage{fill:var(--ink-500);}
+
+/* Кнопка закрытия попапа: .fxCont имеет overflow:hidden и обрезает
+   кнопку, вынесенную в наружный угол. Помещаем её внутрь, в верхний
+   правый угол попапа — полностью видна, не залезает на контент. */
+.CmFxClose, .fxClose{
+	top:12px!important;
+	right:12px!important;
+}
+/* Заголовок-плашка в попапе: отступ сверху, чтобы крестик
+   не перекрывал её угол */
+.fxCont .CmBrTitleSearchWrap{margin-top:var(--space-3)!important;}
