@@ -1300,3 +1300,16 @@ div.CmFilterCheck{padding:var(--space-2) var(--space-2) var(--space-2) 0!importa
 }
 .props_l li:last-child{border-bottom:none;}
 .desc_3{margin-bottom:0!important;}
+
+/* --- Grid: больше паддингов в карточке + выравнивание сайдбара --- */
+.wrapCard{gap:var(--space-4);}
+.partCard{padding:var(--space-4) var(--space-4) var(--space-6)!important; margin:0!important;}
+.CmGridLink{margin:var(--space-3) 0!important;}
+.CmGridBrandArt{padding:0!important;}
+.CmListPrTab_c{margin-top:var(--space-3)!important;}
+
+/* Сайдбар на одном уровне с основным блоком */
+.left_fil{margin-top:0!important;}
+.CmBoxSrchSct{padding:0!important; margin-bottom:var(--space-4)!important;}
+.CmBrSearchWrap{width:100%!important; background:transparent!important;}
+.CmTitleSearchBlock{width:100%!important; padding:0!important;}
