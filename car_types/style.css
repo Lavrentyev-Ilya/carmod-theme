@@ -26,7 +26,7 @@ h1.CmH1Types{align-self:center; font-family:Calibri!important; text-overflow:ell
 
 /* --- Шапка: фильтр по объёму → белая карточка --- */
 .cmHeadBox{
-	margin:0!important;
+	margin:0 0 var(--space-4)!important;
 	padding:var(--space-6)!important;
 	background:var(--bg-000);
 	border:1px solid var(--ink-300);
@@ -100,16 +100,19 @@ h1.CmH1Types{align-self:center; font-family:Calibri!important; text-overflow:ell
 	margin-top:var(--space-4);
 }
 
-/* Шапка таблицы */
-.CmTypeTitleWrap{background:var(--bg-100)!important; padding:var(--space-3) var(--space-2)!important;}
+/* Шапка таблицы — внутренний отступ слева/справа как у строк */
+.CmTypeTitleWrap{background:var(--bg-100)!important; padding:var(--space-4) var(--space-6)!important;}
 .CmTypeTitleWrap div{background:transparent!important;}
 .CmTypeTitleHead .CmTypeColor,
 .CmTypeTitleHead .CmHpLitCylWr span{color:var(--ink-500)!important; font-weight:600;}
 
+/* Вертикальные отступы внутри таблицы, чтобы первая/последняя строки не липли */
+.CmMainTypeTable{padding:var(--space-2) 0;}
+
 /* Строки */
 div.CmTypeListWrap{border-bottom:1px solid var(--ink-300);}
 div.CmTypeListWrap:last-child{border-bottom:none;}
-.CmModelLink{color:var(--ink-700)!important;}
+.CmModelLink{color:var(--ink-700)!important; padding-left:var(--space-6)!important; padding-right:var(--space-6)!important;}
 .CmModelLink:hover{background-color:var(--bg-100)!important;}
 .CmModelLink:hover .CmModelName span{color:var(--accent-600)!important;}
 /* Объём двигателя и название модели — тёмные, плотные */
