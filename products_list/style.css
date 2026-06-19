@@ -1282,3 +1282,21 @@ div.CmFilterCheck{padding:var(--space-2) var(--space-2) var(--space-2) 0!importa
 }
 .left_fil{flex:0 0 24%;}
 .main_part{width:auto!important; flex:1 1 auto; min-width:0; float:none!important; margin:0!important;}
+
+/* --- Характеристики (между картинкой и блоком цены) — единый стиль --- */
+.CmPropsListItem{
+	padding:var(--space-2) 0!important; margin-top:0!important;
+	border-bottom:1px solid var(--ink-300)!important;
+	color:var(--ink-700)!important; font-family:var(--font-ui)!important; font-size:13px!important;
+}
+.CmPropsWrapBl .CmPropsListItem:last-child{border-bottom:none!important;}
+.CmPropsInnerBlock{display:flex!important; justify-content:space-between; align-items:baseline; gap:var(--space-4); width:100%;}
+.CmPropDesc{color:var(--ink-500)!important; text-align:left;}
+.CmPropVal, .CmPropVal b{color:var(--ink-900)!important; text-align:right; font-weight:600;}
+.props_l{list-style:none!important; padding-left:0!important;}
+.props_l li{
+	border-bottom:1px solid var(--ink-300); padding:var(--space-2) 0;
+	color:var(--ink-700)!important; font-size:13px; font-family:var(--font-ui);
+}
+.props_l li:last-child{border-bottom:none;}
+.desc_3{margin-bottom:0!important;}

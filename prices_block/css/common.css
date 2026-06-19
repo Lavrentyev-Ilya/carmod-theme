@@ -176,3 +176,33 @@
 /* «Показать ещё цены» — акцентная ссылка */
 .CmMorePrices{color:var(--accent-500)!important;}
 .CmMorePrices:hover{color:var(--accent-600)!important;}
+
+/* --- Убрать рамку-коробку вокруг блока цены (карточный режим) --- */
+.CmPriceProd, .CmProductPriceBox.CmPriceProd{
+	border:none!important; background:transparent!important; box-shadow:none!important;
+	padding:0!important; margin-top:0!important;
+}
+/* Бейджи наличия/доставки — без рамок-коробок, плоские, на одной линии */
+.CmProductPriceStatusWrap, .CmAvalProdOptionWrap{display:flex!important; align-items:center; gap:var(--space-2);}
+.CmAvalImgTextPage{
+	border:none!important; background:transparent!important; padding:0!important;
+	border-radius:0!important; color:var(--success-600)!important; font-weight:600; gap:4px;
+}
+.delivTd{
+	border:none!important; background:transparent!important; padding:0!important;
+	border-radius:0!important; margin-right:0!important;
+}
+.CmProductPriceStatusWrap .delivTd.CmInStockDelivery,
+.CmProductPriceStatusWrap .delivTd.CmTimeDelivery{background:transparent!important;}
+/* Иконки: наличие — зелёное, доставка — нейтральная */
+.cm_svgAval svg, .CmAvalOnPage, .CmProductPriceDeliveryCheck{fill:var(--success-600)!important;}
+.svgDeliv svg, .delivImg{fill:var(--ink-500)!important;}
+.CmListPrAvail{color:var(--success-600)!important; font-weight:600;}
+.CmDelivTxt{color:var(--ink-500)!important;}
+/* Поставщик-чип снизу — лёгкая нейтральная плашка (элемент из старого дизайна) */
+.CmProductPriceBottomMeta .CmSuplNameStockWrapBl{
+	border:1px solid var(--ink-300)!important; border-radius:var(--radius-ctrl)!important;
+	background:var(--bg-000)!important; padding:5px var(--space-3)!important; color:var(--ink-700)!important;
+}
+.CmProdPrStock{color:var(--ink-700)!important;}
+.svgStock svg, .stockImg{fill:var(--ink-500)!important;}
