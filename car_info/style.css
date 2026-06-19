@@ -384,6 +384,8 @@ span.CmBrandModName{color:#202020; font-size:20px; line-height:30px;}
 	border-radius:var(--radius-card)!important;
 	box-shadow:var(--shadow-card)!important;
 	overflow:hidden;
+	/* высоты строк по контенту, чтобы влезли подписи плиток */
+	grid-template-rows:auto auto!important;
 }
 .CmInnerBlock_1_1, .CmInnerBlockGen, .CmInnerBlock_1_2{background-color:var(--bg-000)!important;}
 .CmInnerBlock_2_1{background-color:var(--bg-100)!important; border-bottom:1px solid var(--ink-300)!important;}
@@ -407,19 +409,52 @@ span.CmBrandModName{color:#202020; font-size:20px; line-height:30px;}
 .CmEngOilTitle, .CmTOilTitle{color:var(--ink-900)!important;}
 .CmEngOilDesc{color:var(--ink-500)!important;}
 
-/* Плитки-ярлыки разделов */
+/* Плитки-ярлыки разделов: иконка + подпись */
+.CmInnerBlock_1_2, .CmInnerBlock_2_2{
+	padding:var(--space-3)!important;
+	gap:var(--space-2);
+	align-content:start;
+}
 .CmCategSvgImg{
+	flex-direction:column!important;
+	justify-content:flex-start!important;
+	gap:var(--space-2);
+	padding:var(--space-3) var(--space-2)!important;
+	border:1px solid var(--ink-300);
+	border-radius:var(--radius-ctrl);
 	fill:var(--ink-500);
 	stroke:var(--ink-500);
-	border-radius:var(--radius-ctrl);
-	transition:background .15s ease, fill .15s ease, stroke .15s ease;
+	flex-basis:auto!important;
+	transition:background .15s ease, border-color .15s ease, fill .15s ease, stroke .15s ease;
+}
+.CmCategSvgImg svg{width:40px!important; height:40px!important;}
+.CmCategLabel{
+	font-family:var(--font-ui);
+	font-size:12px;
+	line-height:1.25;
+	text-align:center;
+	color:var(--ink-700);
+	overflow:hidden;
+	display:-webkit-box;
+	-webkit-line-clamp:2;
+	-webkit-box-orient:vertical;
 }
 .CmCategSvgImg:hover{
+	border-color:var(--accent-500)!important;
+	background:var(--bg-100);
 	fill:var(--accent-500)!important;
 	stroke:var(--accent-500)!important;
-	background:var(--bg-100);
 }
-.CmEngOilBl:hover{background-color:var(--bg-100)!important;}
+.CmCategSvgImg:hover .CmCategLabel{color:var(--accent-600);}
+/* Топливный бак — тот же вид плитки */
+.CmInnerBlock_1_2 > .CmFuelTankBl{
+	flex-direction:column;
+	padding:var(--space-3) var(--space-2);
+	border:1px solid var(--ink-300);
+	border-radius:var(--radius-ctrl);
+}
+.CmEngOilBl{border:1px solid var(--ink-300); border-radius:var(--radius-ctrl); padding:var(--space-2);}
+.CmEngOilBl:hover{background-color:var(--bg-100)!important; border-color:var(--accent-500);}
 .CmEngOilImg svg{fill:var(--ink-500)!important;}
 .CmEngOilBl:hover .CmEngOilDesc{color:var(--ink-700)!important;}
 .CmSpecLink:hover{background-color:var(--bg-100)!important;}
