@@ -473,3 +473,29 @@ input.CmCmtFormControl:focus-visible{outline:1px solid var(--cm-main);}
 	box-shadow:var(--shadow-card)!important; border-top-width:1px!important; padding:var(--space-4)!important;
 }
 .CmTextCr{color:var(--ink-900)!important; font-family:var(--font-ui)!important; font-weight:600; font-size:18px!important;}
+
+
+/* --- Правки табов и контента (по фидбеку) --- */
+/* Убираем длинную линию под навигацией; оставляем только подчёркивание активного таба */
+.CmProductTabsNav.cmBlockTabs{border-bottom:none!important; margin-bottom:0!important; gap:var(--space-2);}
+/* Кнопка таба: подчёркивание ниже + воздух снизу */
+.CmProductTabs .CmtabSelBut{height:auto!important; padding:10px 18px 14px!important; align-items:center;}
+/* Карточка контента — небольшой зазор, без лишней верхней пустоты */
+.CmProductTabs .cmBlockInfo{margin-top:var(--space-3)!important;}
+.CmProductTabs .modelNumTable{margin-top:0!important;}
+.CmProductTabs .centBlockInfo{align-content:start;}
+.CmProductTabs .CmProductRefsPane{align-content:start; align-items:start;}
+
+/* OE / аналоги таблицы — на токенах */
+.CmProductTabs .CmOeNumTable, .CmProductTabs .CmAnalogsTable{
+	border:1px solid var(--ink-300)!important; border-radius:var(--radius-ctrl)!important;
+	overflow:hidden; background:var(--bg-000)!important;
+}
+.CmProductTabs .CmOeNumTable td, .CmProductTabs .CmAnalogsTable td{border-color:var(--ink-300)!important; color:var(--ink-700)!important;}
+.CmProductTabs .CmOeNameTd, .CmProductTabs .cmAnBrandName{
+	background:var(--bg-100)!important; border-right:1px solid var(--ink-300)!important; color:var(--ink-900)!important; font-weight:600;
+}
+.CmProductTabs .CmOeNumTable tr:hover, .CmProductTabs .cmAnalogBlocks:hover{background:var(--bg-100)!important;}
+/* Штрихкод-блок */
+.CmBrCodeWrapBl{border:1px solid var(--ink-300)!important; border-radius:var(--radius-ctrl)!important; background:var(--bg-000)!important; padding:var(--space-3)!important;}
+.barcodText{color:var(--ink-900)!important;}
