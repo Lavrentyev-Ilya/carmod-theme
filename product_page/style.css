@@ -499,3 +499,25 @@ input.CmCmtFormControl:focus-visible{outline:1px solid var(--cm-main);}
 /* Штрихкод-блок */
 .CmBrCodeWrapBl{border:1px solid var(--ink-300)!important; border-radius:var(--radius-ctrl)!important; background:var(--bg-000)!important; padding:var(--space-3)!important;}
 .barcodText{color:var(--ink-900)!important;}
+
+
+/* --- OE Numbers: чистый вид как в reference, без серого ховера строк --- */
+.CmProductTabs .CmOeNumTable tr:hover,
+.CmProductTabs .cmAnalogBlocks:hover,
+.CmProductTabs .CmAnalogsTable tr:hover,
+.CmProductTabs .EanBarTr:hover,
+.CmOeNumTable tr:hover,
+.cmAnalogBlocks:hover{background:transparent!important;}
+/* Ячейка бренда — чистая, тонкий разделитель справа */
+.CmProductTabs .CmOeNameTd, .CmProductTabs .cmAnBrandName{
+	background:var(--bg-000)!important; border-right:1px solid var(--ink-300)!important;
+	color:var(--ink-900)!important; font-weight:600;
+}
+/* Номера: OE — тёмные ссылки, аналоги — акцентные; подсветка только на номере */
+.CmProductTabs .CmOeNumberLink{color:var(--ink-900)!important; padding:3px 6px; border-radius:var(--radius-badge); transition:background .15s ease, color .15s ease;}
+.CmProductTabs .CmOeNumberLink:hover{background:var(--accent-100)!important; color:var(--accent-600)!important;}
+.CmProductTabs .CmAnalogLink{padding:2px 6px; border-radius:var(--radius-badge); transition:background .15s ease, color .15s ease;}
+.CmProductTabs .CmAnalogLink:hover{background:var(--accent-100)!important; color:var(--accent-600)!important;}
+/* Строки таблицы — тонкие разделители */
+.CmProductTabs .CmOeNumTable tr, .CmProductTabs .CmAnalogsTable tr{border-bottom:1px solid var(--ink-300);}
+.CmProductTabs .CmOeNumTable tr:last-child, .CmProductTabs .CmAnalogsTable tr:last-child{border-bottom:none;}
