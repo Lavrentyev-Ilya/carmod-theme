@@ -87,6 +87,7 @@ StatTime_x('Tpl ## Schema before');
 include('blocks/schema.php');
 StatTime_x('Tpl ## Schema after');
 ?>
+<link rel="stylesheet" type="text/css" href="<?=CmAssetUrl_x(TEMPLATE_PAGE_DIR.'style.css')?>" />
 <div class="Popup_n">
     <div class="PopupContent_n">
         <span class="Close_n">&times;</span>

@@ -354,3 +354,122 @@ input.CmCmtFormControl:focus-visible{outline:1px solid var(--cm-main);}
     .CmProductPurchase .CmProductMorePricesPanel .CmMorePriceBlClose{position:absolute;}
 }
 .CmPriceValRow:hover{background-color:var(--cm-light);}
+
+
+/* ============================================================= */
+/* ===============  REDESIGN 2026 (DESIGN.md)  ================= */
+/* Страница товара. Визуальный слой, токены. Прайс — prices_block */
+/* ============================================================= */
+
+/* --- Поверхность страницы --- */
+#CmContent:has(.CmProductPage){
+	background:var(--bg-100)!important; box-shadow:none!important; border:none!important;
+	padding:var(--space-6) var(--space-8) var(--space-8)!important;
+	font-family:var(--font-ui)!important; font-feature-settings:'tnum' 1; color:var(--ink-700);
+}
+.blockMainPart{background:transparent!important; margin:0!important; padding:0!important;}
+
+/* --- Заголовок-плашка + Лого --- */
+.CmBrTitleSearchWrap{
+	margin:0 0 var(--space-2)!important; padding:var(--space-4)!important;
+	background:var(--bg-000)!important; border:1px solid var(--ink-300)!important;
+	border-left:3px solid var(--accent-500)!important; border-radius:var(--radius-card)!important;
+	box-shadow:var(--shadow-card)!important; border-top-width:1px!important;
+}
+.CmBrTitleSearchWrap h1, #CmTitlH1Page h1{
+	font-family:var(--font-ui)!important; font-weight:600!important; font-size:18px!important;
+	line-height:26px!important; color:var(--ink-900)!important; text-shadow:none!important;
+}
+.cmWrapLogoBl, .blockLogo{background:var(--bg-000)!important;}
+.CmTopBox .CmTitleBox{border:1px solid var(--ink-300)!important; border-radius:var(--radius-card)!important; box-shadow:var(--shadow-card)!important; background:var(--bg-000)!important; padding:var(--space-2)!important;}
+
+/* --- Карточка товара: единый белый блок --- */
+.CmProductCard.blockProdCard{
+	background:var(--bg-000); border:1px solid var(--ink-300); border-radius:var(--radius-card);
+	box-shadow:var(--shadow-card); padding:var(--space-6)!important; margin:var(--space-4) 0!important;
+}
+/* Галерея */
+.innBlockFoto{background:transparent!important; box-shadow:none!important;}
+.CmImageToPopup, .imgNoFoto, .CmProductNoPhoto{background:var(--bg-100)!important; border-radius:var(--radius-card)!important;}
+.cmChangeImg, .CmExtUrlImgWrap{border:1px solid var(--ink-300)!important; border-radius:var(--radius-ctrl)!important; background:var(--bg-100)!important;}
+.cmChangeImg:hover, .CmExtUrlImgWrap:hover{border-color:var(--accent-500)!important;}
+.blSmallFoto{background:transparent!important;}
+
+/* Название + мета */
+.cmProdName{color:var(--ink-900)!important; font-weight:600; font-size:15px;}
+.ulMetaName{color:var(--ink-700)!important;}
+.cmMetaName, .cmMetaName_2{color:var(--ink-700)!important;}
+.CmShowMoreMeta{color:var(--accent-500)!important;}
+
+/* Заголовки секций «Specifications» */
+.propTitle, .CmShortNumTit{
+	color:var(--ink-900)!important; border:none!important; border-bottom:1px solid var(--ink-300)!important;
+	font-weight:600!important; font-size:15px!important; line-height:22px!important; padding-bottom:var(--space-2)!important; margin-bottom:var(--space-3)!important;
+}
+/* Таблица характеристик — зебра, label серый / значение тёмное */
+.CmProperTab .CmFullProp, .cmWrapPropTab .CmFullProp{border-bottom:none!important; padding:var(--space-2) var(--space-3)!important; border-radius:var(--radius-badge);}
+.CmProperTab div:nth-child(odd), .CmVehCriTab div:nth-child(odd){background:var(--bg-100)!important;}
+.propTdName{color:var(--ink-500)!important; font-size:13px!important; padding-right:var(--space-3)!important;}
+.propTdVal{color:var(--ink-900)!important; font-size:13px!important; font-weight:500;}
+.blockProdProps span{color:var(--ink-700)!important;}
+
+/* --- Табы (§7.5) --- */
+.CmProductTabsNav{border-bottom:1px solid var(--ink-300)!important;}
+.CmtabSelBut{background:transparent!important; box-shadow:none!important; border:none!important; border-bottom:2px solid transparent!important; color:var(--ink-500)!important; font-weight:500;}
+.CmtabSelBut .cmTabText{color:var(--ink-500)!important;}
+.CmtabSelBut.activeSecTab{border-bottom:2px solid var(--accent-500)!important; color:var(--accent-500)!important;}
+.CmtabSelBut.activeSecTab .cmTabText{color:var(--accent-500)!important;}
+.CmtabSelBut .cmSvgImg{fill:var(--ink-500)!important;}
+.CmtabSelBut.activeSecTab .cmSvgImg, .CmSvgActive{fill:var(--accent-500)!important;}
+.CmtabSelBut:hover .cmTabText, .CmtabSelBut:hover .cmSvgImg{color:var(--ink-700)!important; fill:var(--ink-700)!important;}
+
+/* Контент табов — белая карточка */
+.CmProductTabs .cmBlockInfo{
+	background:var(--bg-000)!important; border:1px solid var(--ink-300)!important;
+	border-radius:var(--radius-card)!important; box-shadow:var(--shadow-card)!important;
+	padding:var(--space-6)!important; margin-top:var(--space-4)!important;
+}
+
+/* OE-номера / аналоги / штрихкод */
+.cmAnalogTitle, .cmEanTitle, .CmRelProdTit, .CmTitleNameTx{color:var(--ink-900)!important; border-color:var(--ink-300)!important; font-weight:600;}
+.CmOeNameTd span, .cmAnBrandName{color:var(--ink-900)!important; font-weight:600;}
+.CmOeNumberLink, .CmAnalogLink, .CmTradeNumLink, .CmOldNewLink{color:var(--accent-500)!important; border-radius:var(--radius-badge);}
+.CmOeNumberLink:hover, .CmAnalogLink:hover, .cmAnalogBlocks a:hover, .CmTradeNumLink:hover, .CmOldNewLink:hover{background:var(--accent-100)!important; color:var(--accent-600)!important;}
+.cmAnalogBlocks:hover, .EanBarTr:hover{background:var(--bg-100)!important;}
+.cmEanTitle span, .CmShemaBraArt{color:var(--accent-500)!important;}
+
+/* --- Совместимые авто --- */
+.CmModelList.CmVehicStyle:hover, .cmVehicModHov:hover{background:var(--bg-100)!important;}
+.CmTitleNameTx{border-color:var(--accent-500)!important;}
+.CmSelBrandTitl, .CmSelectModTitl{color:var(--ink-500)!important;}
+.CmUpArrowImg, .CmLArrowImg{fill:var(--ink-500)!important;}
+
+/* --- Отзывы --- */
+.CmCmtForm{background:var(--accent-100)!important; border-radius:var(--radius-card)!important; box-shadow:none!important; border:1px solid var(--ink-300)!important;}
+.CmCmtFormControl{border:1px solid var(--ink-300)!important; border-radius:var(--radius-ctrl)!important; font-family:var(--font-ui)!important;}
+.CmCmtFormControl:focus-visible, textarea.CmCmtFormControl:focus-visible, input.CmCmtFormControl:focus-visible{outline:none!important; border-color:var(--accent-500)!important; box-shadow:0 0 0 3px var(--accent-100)!important;}
+.CmRatingStars label{color:var(--ink-300)!important;}
+.CmRatingStars input:checked ~ label, .CmRatingStars label:hover, .CmRatingStars label:hover ~ label, .CmRatingStars input:checked + label{color:var(--accent-500)!important;}
+.CmCmtSubmitBtn{background:var(--accent-500)!important; border-radius:var(--radius-ctrl)!important; font-family:var(--font-ui)!important;}
+.CmCmtSubmitBtn:hover{background:var(--accent-600)!important;}
+.CmCmtBox{background:var(--bg-000)!important; border:1px solid var(--ink-300)!important; box-shadow:none!important; border-radius:var(--radius-card)!important;}
+.CmCmtRating{color:var(--accent-500)!important;}
+
+/* --- Похожие товары --- */
+.CmRelProdTitBl{background:var(--bg-000)!important; border:1px solid var(--ink-300)!important; border-left:3px solid var(--accent-500)!important; border-radius:var(--radius-card)!important; box-shadow:var(--shadow-card)!important;}
+.CmRelProdBlock{border:1px solid var(--ink-300)!important; border-radius:var(--radius-card)!important; box-shadow:var(--shadow-card)!important;}
+.CmRelProdBlock:hover{border-color:var(--accent-100)!important; box-shadow:var(--shadow-card-hover)!important;}
+.CmRelProdTitTxt{background:transparent!important;}
+.CmRelProdBrandN{color:var(--ink-900)!important;}
+.CmRelProdArtNum{color:var(--accent-500)!important;}
+.CmRelProdItemName{color:var(--ink-700)!important;}
+.CmRelProdItemPrice{color:var(--success-600)!important;}
+
+/* --- Плашка «Аналоги и киты» --- */
+.CmCrossTitleBl{margin:var(--space-6) 0 0!important;}
+.CmTitleCrossText{
+	background:var(--bg-000)!important; border:1px solid var(--ink-300)!important;
+	border-left:3px solid var(--accent-500)!important; border-radius:var(--radius-card)!important;
+	box-shadow:var(--shadow-card)!important; border-top-width:1px!important; padding:var(--space-4)!important;
+}
+.CmTextCr{color:var(--ink-900)!important; font-family:var(--font-ui)!important; font-weight:600; font-size:18px!important;}
