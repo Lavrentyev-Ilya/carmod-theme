@@ -1313,3 +1313,15 @@ div.CmFilterCheck{padding:var(--space-2) var(--space-2) var(--space-2) 0!importa
 .CmBoxSrchSct{padding:0!important; margin-bottom:var(--space-4)!important;}
 .CmBrSearchWrap{width:100%!important; background:transparent!important;}
 .CmTitleSearchBlock{width:100%!important; padding:0!important;}
+
+/* --- Переключатель OEM/Analogs/All: больше высоты/паддинга, цифры внутри --- */
+.left_fil .CmTumblers{gap:var(--space-1);}
+.left_fil .CmTumButn{
+	height:auto!important; min-height:44px;
+	padding:var(--space-2) var(--space-3)!important;
+	flex-direction:column; align-items:center!important; justify-content:center;
+	gap:2px; line-height:1.2; box-shadow:none!important;
+}
+.left_fil a.CmTumPushed{box-shadow:none!important; background:var(--accent-100)!important; color:var(--accent-600)!important;}
+.left_fil .CmItemCount{font-size:11px!important; color:var(--ink-500)!important; line-height:1;}
+.left_fil .CmTumButn.CmTumPushed .CmItemCount{color:var(--accent-600)!important;}
