@@ -508,9 +508,9 @@ input.CmCmtFormControl:focus-visible{outline:1px solid var(--cm-main);}
 .CmProductTabs .EanBarTr:hover,
 .CmOeNumTable tr:hover,
 .cmAnalogBlocks:hover{background:transparent!important;}
-/* Ячейка бренда — чистая, тонкий разделитель справа */
+/* Ячейка марки — лёгкий серый фон + тонкий разделитель справа (как в reference) */
 .CmProductTabs .CmOeNameTd, .CmProductTabs .cmAnBrandName{
-	background:var(--bg-000)!important; border-right:1px solid var(--ink-300)!important;
+	background:var(--bg-100)!important; border-right:1px solid var(--ink-300)!important;
 	color:var(--ink-900)!important; font-weight:600;
 }
 /* Номера: OE — тёмные ссылки, аналоги — акцентные; подсветка только на номере */
