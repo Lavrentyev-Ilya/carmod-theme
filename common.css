@@ -206,9 +206,17 @@ a.CmPageAct{background:#909090; color:#ffffff; border:1px solid #909090; box-sha
 /* Header */
 .CmTopBox{display:flex; justify-content:space-between; align-items:center; margin:0px -21px; padding:10px 21px 10px 21px;}
 .CmHeadTitleWrapBlock{position:relative; display:flex; justify-content:space-between; align-items:flex-start; margin:0px!important; padding:0px!important; width:100%;}
-div.CmTitleBox{background-color:#ffffff; border-radius:3px; align-self:flex-start; display:flex;}
+div.CmTitleBox{align-self: flex-start;
+    display: flex;
+    background: var(--bg-000) !important;
+    border: 1px solid var(--ink-300) !important;
+    border-radius: var(--radius-card) !important;
+    box-shadow: var(--shadow-card) !important;
+    padding: var(--space-3) !important;
+    align-items: center;
+    justify-content: center;}
 .CmTitleBox{border-color:var(--cm-main);}
-.CmHeadSecPicture{height:77px; width:81px; margin:0px 10px 0px 0px; background-position:0px 0px; background-repeat:no-repeat; background-size:contain;}
+.CmHeadSecPicture{height:77px; width:81px; background-position:0px 0px; background-repeat:no-repeat; background-size:contain;}
 .CmHeadTextLim{ padding:0px 16px 0px 0px; max-width:280px; font-weight:bold; font-size:25px; font-family: Calibri!important;  text-shadow:1px 1px 2px #ffffff !important; }
 .CmHeadTextLim span{font-size:18px; color:#696969;}
 .CmFloatRight{float:right;}
